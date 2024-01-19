@@ -36,9 +36,9 @@
             this.patientSymptoms = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.patientHistory = new System.Windows.Forms.Label();
-            this.patientGender = new System.Windows.Forms.Label();
-            this.patientAge = new System.Windows.Forms.Label();
-            this.patientName = new System.Windows.Forms.Label();
+            this.patientGenderTB = new System.Windows.Forms.Label();
+            this.patientAgeTB = new System.Windows.Forms.Label();
+            this.patientNameTB = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,9 +54,9 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.patientGender);
-            this.groupBox1.Controls.Add(this.patientAge);
-            this.groupBox1.Controls.Add(this.patientName);
+            this.groupBox1.Controls.Add(this.patientGenderTB);
+            this.groupBox1.Controls.Add(this.patientAgeTB);
+            this.groupBox1.Controls.Add(this.patientNameTB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 16);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -99,7 +99,7 @@
             this.patientClinical.Location = new System.Drawing.Point(29, 55);
             this.patientClinical.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientClinical.Name = "patientClinical";
-            this.patientClinical.Size = new System.Drawing.Size(139, 19);
+            this.patientClinical.Size = new System.Drawing.Size(118, 17);
             this.patientClinical.TabIndex = 0;
             this.patientClinical.Text = "Clinical Diagnosis";
             // 
@@ -122,7 +122,7 @@
             this.patientSymptoms.Location = new System.Drawing.Point(21, 41);
             this.patientSymptoms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientSymptoms.Name = "patientSymptoms";
-            this.patientSymptoms.Size = new System.Drawing.Size(160, 19);
+            this.patientSymptoms.Size = new System.Drawing.Size(131, 17);
             this.patientSymptoms.TabIndex = 0;
             this.patientSymptoms.Text = "Patient\'s Symptoms";
             // 
@@ -145,42 +145,42 @@
             this.patientHistory.Location = new System.Drawing.Point(21, 41);
             this.patientHistory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientHistory.Name = "patientHistory";
-            this.patientHistory.Size = new System.Drawing.Size(131, 19);
+            this.patientHistory.Size = new System.Drawing.Size(109, 17);
             this.patientHistory.TabIndex = 0;
             this.patientHistory.Text = "Patient\'s history";
             // 
-            // patientGender
+            // patientGenderTB
             // 
-            this.patientGender.AutoSize = true;
-            this.patientGender.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientGender.Location = new System.Drawing.Point(122, 40);
-            this.patientGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.patientGender.Name = "patientGender";
-            this.patientGender.Size = new System.Drawing.Size(63, 20);
-            this.patientGender.TabIndex = 0;
-            this.patientGender.Text = "Gender";
+            this.patientGenderTB.AutoSize = true;
+            this.patientGenderTB.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientGenderTB.Location = new System.Drawing.Point(122, 40);
+            this.patientGenderTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.patientGenderTB.Name = "patientGenderTB";
+            this.patientGenderTB.Size = new System.Drawing.Size(51, 17);
+            this.patientGenderTB.TabIndex = 0;
+            this.patientGenderTB.Text = "Gender";
             // 
-            // patientAge
+            // patientAgeTB
             // 
-            this.patientAge.AutoSize = true;
-            this.patientAge.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientAge.Location = new System.Drawing.Point(272, 40);
-            this.patientAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.patientAge.Name = "patientAge";
-            this.patientAge.Size = new System.Drawing.Size(39, 20);
-            this.patientAge.TabIndex = 0;
-            this.patientAge.Text = "Age";
+            this.patientAgeTB.AutoSize = true;
+            this.patientAgeTB.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientAgeTB.Location = new System.Drawing.Point(272, 40);
+            this.patientAgeTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.patientAgeTB.Name = "patientAgeTB";
+            this.patientAgeTB.Size = new System.Drawing.Size(31, 17);
+            this.patientAgeTB.TabIndex = 0;
+            this.patientAgeTB.Text = "Age";
             // 
-            // patientName
+            // patientNameTB
             // 
-            this.patientName.AutoSize = true;
-            this.patientName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientName.Location = new System.Drawing.Point(8, 40);
-            this.patientName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.patientName.Name = "patientName";
-            this.patientName.Size = new System.Drawing.Size(52, 20);
-            this.patientName.TabIndex = 0;
-            this.patientName.Text = "Name";
+            this.patientNameTB.AutoSize = true;
+            this.patientNameTB.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNameTB.Location = new System.Drawing.Point(8, 40);
+            this.patientNameTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.patientNameTB.Name = "patientNameTB";
+            this.patientNameTB.Size = new System.Drawing.Size(43, 17);
+            this.patientNameTB.TabIndex = 0;
+            this.patientNameTB.Text = "Name";
             // 
             // button1
             // 
@@ -226,7 +226,7 @@
             // 
             // DoctorAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(968, 541);
@@ -256,10 +256,10 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label patientClinical;
-        private System.Windows.Forms.Label patientGender;
-        private System.Windows.Forms.Label patientAge;
+        private System.Windows.Forms.Label patientGenderTB;
+        private System.Windows.Forms.Label patientAgeTB;
         private System.Windows.Forms.Label patientHistory;
-        private System.Windows.Forms.Label patientName;
+        private System.Windows.Forms.Label patientNameTB;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;

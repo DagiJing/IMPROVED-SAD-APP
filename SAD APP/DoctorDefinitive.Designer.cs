@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.frequencyTB = new System.Windows.Forms.TextBox();
+            this.dosageTB = new System.Windows.Forms.TextBox();
+            this.medicationTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.definitiveTB = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -45,9 +45,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.frequencyTB);
+            this.groupBox1.Controls.Add(this.dosageTB);
+            this.groupBox1.Controls.Add(this.medicationTB);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -61,29 +61,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prescription Detail";
             // 
-            // textBox3
+            // frequencyTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 130);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 27);
-            this.textBox3.TabIndex = 1;
+            this.frequencyTB.Location = new System.Drawing.Point(182, 130);
+            this.frequencyTB.Margin = new System.Windows.Forms.Padding(4);
+            this.frequencyTB.Name = "frequencyTB";
+            this.frequencyTB.Size = new System.Drawing.Size(166, 23);
+            this.frequencyTB.TabIndex = 1;
             // 
-            // textBox2
+            // dosageTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 89);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 27);
-            this.textBox2.TabIndex = 1;
+            this.dosageTB.Location = new System.Drawing.Point(182, 89);
+            this.dosageTB.Margin = new System.Windows.Forms.Padding(4);
+            this.dosageTB.Name = "dosageTB";
+            this.dosageTB.Size = new System.Drawing.Size(166, 23);
+            this.dosageTB.TabIndex = 1;
             // 
-            // textBox1
+            // medicationTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 48);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 27);
-            this.textBox1.TabIndex = 1;
+            this.medicationTB.Location = new System.Drawing.Point(182, 48);
+            this.medicationTB.Margin = new System.Windows.Forms.Padding(4);
+            this.medicationTB.Name = "medicationTB";
+            this.medicationTB.Size = new System.Drawing.Size(254, 23);
+            this.medicationTB.TabIndex = 1;
             // 
             // label3
             // 
@@ -92,7 +92,7 @@
             this.label3.Location = new System.Drawing.Point(51, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Frequency:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -104,7 +104,7 @@
             this.label2.Location = new System.Drawing.Point(78, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dosage:";
             // 
@@ -115,14 +115,14 @@
             this.label1.Location = new System.Drawing.Point(42, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medication:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.definitiveTB);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(15, 286);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -133,14 +133,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Definitive Diagnosis";
             // 
-            // richTextBox1
+            // definitiveTB
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(46, 28);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(349, 119);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.definitiveTB.Location = new System.Drawing.Point(46, 28);
+            this.definitiveTB.Margin = new System.Windows.Forms.Padding(4);
+            this.definitiveTB.Name = "definitiveTB";
+            this.definitiveTB.Size = new System.Drawing.Size(349, 119);
+            this.definitiveTB.TabIndex = 0;
+            this.definitiveTB.Text = "";
             // 
             // button1
             // 
@@ -154,6 +154,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Enter ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -171,7 +172,7 @@
             // 
             // DoctorDefinitive
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(604, 581);
@@ -198,11 +199,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox frequencyTB;
+        private System.Windows.Forms.TextBox dosageTB;
+        private System.Windows.Forms.TextBox medicationTB;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox definitiveTB;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

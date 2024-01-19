@@ -13,10 +13,12 @@ namespace SAD_APP
     public partial class DoctorDefinitive : Form
     {
         DoctorAdd doctorAdd;
-        public DoctorDefinitive(DoctorAdd doctorAdd)
+        int patientId;
+        public DoctorDefinitive(DoctorAdd doctorAdd, int patientId)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
+            this.patientId = patientId;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -38,6 +40,26 @@ namespace SAD_APP
         {
             doctorAdd.Show();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //BG ADDED START
+            string medication = medicationTB.Text;
+            string dosage = dosageTB.Text;
+            string frequency = frequencyTB.Text;
+
+            try
+            {
+                //MySQLConn.addPrescription(medication, dosage, frequency);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("An error occurred: " + err.Message);
+            }
+            
+
+            //BG ADDED END
         }
     }
 }

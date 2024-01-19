@@ -26,6 +26,8 @@ namespace SAD_APP
             this.patientFullName = patientFullName;
             this.patientAge = patientAge;
             this.patientGender = patientGender;
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)

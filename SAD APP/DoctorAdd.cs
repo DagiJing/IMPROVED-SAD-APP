@@ -13,13 +13,30 @@ namespace SAD_APP
     public partial class DoctorAdd : Form
     {
         Doctor doctor;
-        int ID;
+        int patientID;
+        
 
-        public DoctorAdd(Doctor doctor, int ID)
+        public DoctorAdd(Doctor doctor, int ID, string fullName, string patientAge, string patientGender)
         {
             InitializeComponent();
             this.doctor = doctor; 
-            this.ID = ID;
+            this.patientID = ID;
+
+            //BG added start
+            //(string patientName, string gender, int age) = MySQLConn.RetrieveGeneralInfo(patientID);
+
+            patientNameTB.Text = fullName;
+            patientGenderTB.Text = patientGender;
+            patientAgeTB.Text = patientAge.ToString();
+
+            (string clinicalDiagnosis, string symptoms, string history) = MySQLConn.RetrieveDiagnosisAndSymptoms(patientID);
+            patientHistory.Text = history;
+            patientSymptoms.Text = symptoms;
+            patientClinical.Text = clinicalDiagnosis;
+
+
+            //BG ADDED END
+
 
 
         }
@@ -54,7 +71,7 @@ namespace SAD_APP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new DoctorDefinitive(this).Show();
+            new DoctorDefinitive(this, patientID).Show();
             this.Hide();
         }
     }

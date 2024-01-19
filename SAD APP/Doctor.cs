@@ -64,7 +64,12 @@ namespace SAD_APP
                 // If no cells are empty, proceed with the existing logic
                 int patientID = int.Parse(row.Cells["PatientID"].Value.ToString());
 
-                new DoctorAdd(this, patientID).Show();
+                
+                string fullName = row.Cells["Name"].Value.ToString();
+                string patientAge = row.Cells["Age"].Value.ToString();
+                string patientGender = row.Cells["Gender"].Value.ToString();
+
+                new DoctorAdd(this, patientID, fullName, patientAge, patientGender).Show();
                 this.Hide();
             }
             else

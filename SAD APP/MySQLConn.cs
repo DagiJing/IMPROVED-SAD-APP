@@ -364,9 +364,44 @@ namespace SAD_APP
             }
         }
 
+        //BG ADDED HERE
+        //Getting the diagnosis information
+        public static (string, string, string) RetrieveDiagnosisAndSymptoms(int patientID)
+        {
+            string clinicalDiagnosis = "";
+            string symptoms = "";
+            string history = "";
 
-        // The list of Reviewed Patients
-        public static DataTable listOfReviewedPatient()
+            using (SqlConnection conn = new SqlConnection(connstring))
+            {
+                conn.Open();
+
+                string selectQuery = "use FinalHospital; SELECT ClinicalDiagnosis, History, Symptoms FROM Diagnosis WHERE PatientID = @ID;";
+
+                using (SqlCommand cmd = new SqlCommand(selectQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ID", patientID);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            clinicalDiagnosis = reader.GetString(reader.GetOrdinal("ClinicalDiagnosis"));
+                            symptoms = reader.GetString(reader.GetOrdinal("Symptoms"));
+                            history = reader.GetString(reader.GetOrdinal("History"));
+                        }
+                    }
+                }
+            }
+
+            return (clinicalDiagnosis, symptoms, history);
+        }
+        
+            //BG ADDED END
+
+
+            // The list of Reviewed Patients
+            public static DataTable listOfReviewedPatient()
         {
             DataTable dt = new DataTable();
 
