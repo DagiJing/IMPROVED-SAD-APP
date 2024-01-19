@@ -79,7 +79,7 @@ namespace SAD_APP
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void radioButton2_checkedChanged(object sender, EventArgs e)
         {
 
         }
