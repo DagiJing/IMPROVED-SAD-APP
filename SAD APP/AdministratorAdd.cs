@@ -59,7 +59,7 @@ namespace SAD_APP
             }
             else
             {
-                MessageBox.Show("Make Sure the password are similar");
+                MessageBox.Show("Please confirm your password correctly.");
             }
 
             administrator.refreshUsersList();

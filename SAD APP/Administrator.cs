@@ -48,7 +48,7 @@ namespace SAD_APP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this account?", "Confirm Account Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this account?", "Confirm Account Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 if (listOfUsers.SelectedRows.Count > 0)
@@ -62,8 +62,12 @@ namespace SAD_APP
                     }
                     else
                     {
-                        MessageBox.Show("Accound couldn't be deleted!");
+                        MessageBox.Show("Accound could not be deleted!");
                     } 
+                }
+                else
+                {
+                    MessageBox.Show("Please select the account you want to delete");
                 }
             refreshUsersList();
             }

@@ -52,6 +52,7 @@
             this.listOfReviewedPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listOfReviewedPatient.Size = new System.Drawing.Size(372, 299);
             this.listOfReviewedPatient.TabIndex = 0;
+            this.listOfReviewedPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listOfReviewedPatient_CellContentClick);
             // 
             // label1
             // 
@@ -60,7 +61,7 @@
             this.label1.Location = new System.Drawing.Point(178, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 31);
+            this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reviewed Patient";
             // 
@@ -104,7 +105,7 @@
             // 
             // Doctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(619, 440);

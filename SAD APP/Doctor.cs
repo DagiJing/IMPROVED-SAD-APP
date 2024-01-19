@@ -56,6 +56,7 @@ namespace SAD_APP
                 // If any cell is empty, show a message and return
                 if (rowHasEmptyCell)
                 {
+                    //TODO: Replace message with something more medical and try to see why/when this condition occurs
                     MessageBox.Show("The selected row contains an empty cell. Please select a complete row.");
                     return;
                 }
@@ -77,6 +78,11 @@ namespace SAD_APP
         {
             loginPage.Show();
             this.Close();
+        }
+
+        private void listOfReviewedPatient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
