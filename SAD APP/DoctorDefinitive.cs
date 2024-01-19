@@ -14,12 +14,16 @@ namespace SAD_APP
     {
         DoctorAdd doctorAdd;
         int patientId;
+
+        
+
         public DoctorDefinitive(DoctorAdd doctorAdd, int patientId)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
             this.patientId = patientId;
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -48,10 +52,25 @@ namespace SAD_APP
             string medication = medicationTB.Text;
             string dosage = dosageTB.Text;
             string frequency = frequencyTB.Text;
+            string definitive = definitiveTB.Text;
+
+            //A mechanism to get the doctor ID of the doctor currently entering the details
+            int doctorId = 0;
 
             try
             {
-                //MySQLConn.addPrescription(medication, dosage, frequency);
+                MySQLConn.addPrescription(patientId, doctorId, medication, dosage, frequency);
+                MySQLConn.addDefinitive(patientId, definitive);
+
+                if (/*TODO: Condition to check if entry was successful*/ true)
+                {
+                    MessageBox.Show("Definitive diagnosis entry was successful");
+
+                    /*Here should we allow the doctor to enter another diagnosis (if that is the case) just
+                     by clearning the entry fields or would that create a logic problem?
+                     */
+                    
+                }
             }
             catch (Exception err)
             {

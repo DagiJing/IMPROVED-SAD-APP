@@ -396,6 +396,49 @@ namespace SAD_APP
 
             return (clinicalDiagnosis, symptoms, history);
         }
+
+        //Adding the prescription form details
+        public static void addPrescription (int patientId, int doctorId, string medication, string dosage, string frequency)
+        {
+            using (SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+                string query = "USE FinalHospital; INSERT INTO Prescription (DoctorID, PatientID, Medication, Dosage, Frequency) " +
+                    "VALUES(@doctorId, @patientId, @medication, @dosage, @frequency)";
+
+                //TODO: Find a way to automatically enter the current date in the database (because it is
+                //an attribute in the decision table)
+                //PrescriptionID (the PK) will generate automatically right?
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@patientId", patientId);
+                    command.Parameters.AddWithValue("@doctorId", doctorId);
+                    command.Parameters.AddWithValue("@medication", medication);
+                    command.Parameters.AddWithValue("@dosage", dosage);
+                    command.Parameters.AddWithValue("@frequency", frequency);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //Adding the definitive diagnosis
+        public static void addDefinitive (int patientId, string definitive)
+        {
+            using (SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+                string updateQuery = "USE FinalHospital UPDATE Diagnosis SET DefinitiveDiagnosis = @definitiveDiagnosis WHERE PatientId = @patientId;";
+
+                using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@definitiveDiagnosis", definitive);
+                    command.Parameters.AddWithValue("@patientId", patientId);
+                   
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
         
             //BG ADDED END
 
@@ -409,7 +452,7 @@ namespace SAD_APP
             {
                 conn.Open();
 
-                string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient Where Reviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
+                string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient WhereReviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
