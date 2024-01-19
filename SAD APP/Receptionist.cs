@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//This is the receptionist page beza g
+//This is the receptionist page
 namespace SAD_APP
 {
     public partial class Receptionist : Form
