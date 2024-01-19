@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//This is the receptionist page beza g
 namespace SAD_APP
 {
     public partial class Receptionist : Form
@@ -78,7 +79,7 @@ namespace SAD_APP
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void radioButton2_checkedChanged(object sender, EventArgs e)
         {
 
         }
