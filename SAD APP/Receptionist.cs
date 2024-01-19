@@ -44,11 +44,11 @@ namespace SAD_APP
 
             if (fullName != null && age != 0 && gender != null)
             {
-                MySQLConn.registerPatient(fullName, age, gender, city,phonenumber,email);
+                MySQLConn.registerPatient(fullName, age, gender, city, phonenumber, email);
 
                 foreach (Control c in this.Controls)
                 {
-                    if (c is TextBox && c.Name != "textBox3")
+                    if (c is TextBox /*&& c.Name != "textBox3"*/)
                     {
                         ((TextBox)c).Clear();
                     }
@@ -64,7 +64,7 @@ namespace SAD_APP
             }
             else
             {
-                MessageBox.Show("Please enter valid values!");
+                MessageBox.Show("Please enter all the required information!");
             }
 
         }
@@ -79,7 +79,7 @@ namespace SAD_APP
 
         }
 
-        private void radioButton2_checkedChanged(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
