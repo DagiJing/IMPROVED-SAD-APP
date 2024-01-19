@@ -132,13 +132,14 @@
             "Kirkos ",
             "Kolfe Keranio ",
             "Lideta ",
-            "Nifas Silk-Lafto ",
+            "Nifas Silk",
             "Yeka"});
             this.pcity.Location = new System.Drawing.Point(252, 282);
             this.pcity.Margin = new System.Windows.Forms.Padding(4);
             this.pcity.Name = "pcity";
             this.pcity.Size = new System.Drawing.Size(257, 31);
             this.pcity.TabIndex = 2;
+            this.pcity.SelectedIndexChanged += new System.EventHandler(this.pcity_SelectedIndexChanged);
             // 
             // textBox3
             // 

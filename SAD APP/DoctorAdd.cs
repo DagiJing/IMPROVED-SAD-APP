@@ -20,6 +20,8 @@ namespace SAD_APP
             InitializeComponent();
             this.doctor = doctor; 
             this.ID = ID;
+
+
         }
 
         private void label7_Click(object sender, EventArgs e)

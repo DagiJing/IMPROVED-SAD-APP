@@ -88,5 +88,10 @@ namespace SAD_APP
             loginPage.Show();
             this.Close();
         }
+
+        private void pcity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

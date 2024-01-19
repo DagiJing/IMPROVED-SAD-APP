@@ -41,6 +41,26 @@ namespace SAD_APP
             if (listOfReviewedPatient.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = listOfReviewedPatient.SelectedRows[0];
+                bool rowHasEmptyCell = false;
+
+                // Check if any cell in the row is empty
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value == null || string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                    {
+                        rowHasEmptyCell = true;
+                        break;
+                    }
+                }
+
+                // If any cell is empty, show a message and return
+                if (rowHasEmptyCell)
+                {
+                    MessageBox.Show("The selected row contains an empty cell. Please select a complete row.");
+                    return;
+                }
+
+                // If no cells are empty, proceed with the existing logic
                 int patientID = int.Parse(row.Cells["PatientID"].Value.ToString());
 
                 new DoctorAdd(this, patientID).Show();
@@ -49,8 +69,9 @@ namespace SAD_APP
             else
             {
                 MessageBox.Show("Please select a row!");
-            }   
+            }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

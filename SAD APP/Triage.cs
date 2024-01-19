@@ -48,20 +48,40 @@ namespace SAD_APP
             if (listOfPatient.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = listOfPatient.SelectedRows[0];
+                bool rowHasEmptyCell = false;
+
+                // Check if any cell in the row is empty
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value == null || string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                    {
+                        rowHasEmptyCell = true;
+                        break;
+                    }
+                }
+
+                // If any cell is empty, show a message and return
+                if (rowHasEmptyCell)
+                {
+                    MessageBox.Show("The selected row contains an empty cell. Please select a complete row.");
+                    return;
+                }
+
+                // If no cells are empty, proceed with the existing logic
                 int patientID = int.Parse(row.Cells["PatientID"].Value.ToString());
                 string fullName = row.Cells["Name"].Value.ToString();
                 string patientAge = row.Cells["Age"].Value.ToString();
                 string patientGender = row.Cells["Gender"].Value.ToString();
 
-                new TriageAdd(this, patientID, fullName, patientAge, patientGender).Show(); 
+                new TriageAdd(this, patientID, fullName, patientAge, patientGender).Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Please select a row!");
             }
-            
         }
+
 
         private void listOfPatient_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

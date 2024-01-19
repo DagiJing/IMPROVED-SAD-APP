@@ -313,32 +313,26 @@ namespace SAD_APP
                                 //MessageBox.Show("this is the iD: " + doctorID);
                                 using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                                 {
-                                    MessageBox.Show("InsertQuery");
                                     cmd.Parameters.AddWithValue("@ID", ID);
                                     cmd.Parameters.AddWithValue("@Clinical", clinical);
                                     cmd.Parameters.AddWithValue("@History", history);
                                     cmd.Parameters.AddWithValue("@Symptom", symptom);
 
                                     int rowsAffected = cmd.ExecuteNonQuery();
-                                    //MessageBox.Show("Execute");
 
                                     if (rowsAffected > 0)
                                     {
-                                        //MessageBox.Show("UpdateQuery");
                                         using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
                                         {
                                             updateCmd.Parameters.AddWithValue("@ID", ID);
                                             rowsAffected = updateCmd.ExecuteNonQuery();
-                                           // MessageBox.Show("Execute");
                                         }
 
                                         using (SqlCommand insertAppointmentCmd = new SqlCommand(insertAppointmentQuery, conn))
                                         {
-                                           // MessageBox.Show("Appointment");
                                             insertAppointmentCmd.Parameters.AddWithValue("@ID", ID);
                                             insertAppointmentCmd.Parameters.AddWithValue("@DoctorID", doctorID);
                                             rowsAffected = insertAppointmentCmd.ExecuteNonQuery();
-                                            //MessageBox.Show("Execute");
                                         }
 
                                         using (SqlCommand insertAdmissionCmd = new SqlCommand(insertAdmissionQuery, conn))
@@ -354,7 +348,6 @@ namespace SAD_APP
                             }
                             else
                             {
-                                // No doctor found with the given name
                                 return false;
                             }
                         }
