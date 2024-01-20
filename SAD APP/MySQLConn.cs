@@ -452,7 +452,7 @@ namespace SAD_APP
             {
                 conn.Open();
 
-                string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient WhereReviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
+                string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient Where Reviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
