@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//fixed some bugs here
 namespace SAD_APP
 {
     public partial class Administrator : Form
