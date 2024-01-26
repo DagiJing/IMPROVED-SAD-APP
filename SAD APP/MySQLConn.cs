@@ -443,6 +443,28 @@ namespace SAD_APP
             //BG ADDED END
 
 
+            //BG ADDED AGAIN
+            //Getting the data for the list of requested tests
+            public static DataTable listOfRequestedTests()
+        {
+            DataTable requestedTests = new DataTable();
+            using (SqlConnection conn = new SqlConnection(connstring))
+            {
+                conn.Open();
+
+                string query = "SELECT p.name, p.gender, u.name, l.testname FROM testRequest t JOIN users u ON t.doctorid = u.userid JOIN patient p ON t.patientid = p.patientid JOIN labtest l ON t.labtestid = l.testid";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, conn))
+                    {
+                        da.Fill(requestedTests);
+
+                    }
+                }
+            }
+            return requestedTests;
+        }
+
             // The list of Reviewed Patients
             public static DataTable listOfReviewedPatient()
         {

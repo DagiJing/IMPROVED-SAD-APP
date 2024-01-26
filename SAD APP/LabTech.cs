@@ -17,7 +17,10 @@ namespace SAD_APP
         {
             InitializeComponent();
             this.loginPage = new LoginPage();
-            this.loginPage = loginpage;
+
+            //this.loginPage = loginpage;
+
+            dataGridView1.DataSource = MySQLConn.listOfRequestedTests();
         }
 
         private void LabTech_Load(object sender, EventArgs e)
