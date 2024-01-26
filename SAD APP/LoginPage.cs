@@ -16,7 +16,7 @@ namespace SAD_APP
         {
             InitializeComponent();
         }
-
+//updated some stuff
         private void LoginPage_Load(object sender, EventArgs e)
         {
 
