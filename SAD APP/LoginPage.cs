@@ -29,7 +29,7 @@ namespace SAD_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string role = MySQLConn.loginPage(this.staffUsername.Text, this.staffPass.Text);
+            (string role, int userid) = MySQLConn.loginPage(this.staffUsername.Text, this.staffPass.Text);
             this.staffUsername.Text = "";
             this.staffPass.Text = "";
 
@@ -45,7 +45,7 @@ namespace SAD_APP
                         new Doctor(this).Show();
                         break;
                     case "technician":
-                        new LabTech(this).Show();
+                        new LabTech(this, userid).Show();
                         break;
                     case "manager":
                         new Manager(this).Show();

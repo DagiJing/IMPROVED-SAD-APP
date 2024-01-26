@@ -13,10 +13,12 @@ namespace SAD_APP
     public partial class LabTech : Form
     {
         LoginPage loginPage;
-        public LabTech(LoginPage loginpage)
+        int userID;
+        public LabTech(LoginPage loginpage, int userid)
         {
             InitializeComponent();
             this.loginPage = new LoginPage();
+            userID = userid;
 
             //this.loginPage = loginpage;
 
@@ -30,14 +32,39 @@ namespace SAD_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new LabTechResult(this).Show();
-            this.Hide();
+            
+            if (dataGridView1.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                int requestId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["requestid"].Value);
+                int patientId = 
+
+                string patientName = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string patientGender = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string doctorName = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string testName = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+
+                new LabTechResult(this, requestId, userID).Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a row");
+            }
+            
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             loginPage.Show();
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -13,10 +13,16 @@ namespace SAD_APP
     public partial class LabTechResult : Form
     {
         LabTech labTech;
-        public LabTechResult(LabTech labTech)
+        int requestId;
+        int labtechId;
+
+        public LabTechResult(LabTech labTech, int requestId, int labtechId)
         {
             InitializeComponent();
             this.labTech = labTech;
+
+            this.requestId = requestId;
+            this.labtechId = labtechId;
         }
 
         private void LabTechResult_Load(object sender, EventArgs e)
@@ -28,6 +34,14 @@ namespace SAD_APP
         {
             labTech.Show();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string testResult = richTextBox1.Text + richTextBox2.Text;
+            int pid = MySQLConn.retrievePatientId(requestId);
+            MySQLConn.enterTestResults(pid, requestId, labtechId, testResult);
+
         }
     }
 }

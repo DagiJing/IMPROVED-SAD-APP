@@ -25,11 +25,11 @@ namespace SAD_APP
 
 
         // Login page authentication 
-        public static string loginPage(string username, string password)
+        public static (string, int) loginPage(string username, string password)
         {
             try
             {
-                string conQuery = "USE FinalHospital; SELECT Role FROM Users WHERE username = @Username AND password = @Password";
+                string conQuery = "USE FinalHospital; SELECT Role, UserID FROM Users WHERE username = @Username AND password = @Password";
 
                 using (SqlConnection conn = new SqlConnection(connstring))
                 {
@@ -47,14 +47,15 @@ namespace SAD_APP
                                 while (reader.Read())
                                 {
                                     string role = reader.GetString(0);
-                                    return role;
+                                    int userid = reader.GetInt32(1);
+                                    return (role, userid) ;
                                 }
                             }
                         }
                     }
                 }
 
-                return null;
+                return (null, 0);
             }
             catch (SqlException ex)
             {
@@ -422,6 +423,57 @@ namespace SAD_APP
             }
         }
 
+        //BG ADDED
+
+        //Recording test results entered by lab technician
+        //First retrieving patientId for use in labtechresult and labtech (enter test results function
+
+        public static int retrievePatientId (int requestId)
+        {
+            int patientid = 0;
+            using (SqlConnection conn = new SqlConnection(connstring))
+            {
+                conn.Open();
+                string query = "SELECT PatientId FROM TestRequest WHERE RequestId = @requestid";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@requestid", requestId);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                patientid = reader.GetInt32(0);
+                            }
+                        }
+                    }
+                }
+            }
+            return patientid;
+        }
+        //Then actually insert the test results into the database
+        public static void enterTestResults (int patientId, int requestId, int labtechId, string testresult)
+        {
+            using (SqlConnection conn = new SqlConnection(connstring))
+            {
+                conn.Open();
+                string query = "INSERT INTO TestResult (PatientID, RequestID, LabTechId, TestResult) VALUES (@patientid, @requestid, @labtechid, @testresult)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@patientid", patientId);
+                    cmd.Parameters.AddWithValue("@requestid", requestId);
+                    cmd.Parameters.AddWithValue("@labtechid", labtechId);
+                    cmd.Parameters.AddWithValue("@testresult", testresult);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
         //Adding the definitive diagnosis
         public static void addDefinitive (int patientId, string definitive)
         {
@@ -452,7 +504,7 @@ namespace SAD_APP
             {
                 conn.Open();
 
-                string query = "SELECT p.name, p.gender, u.name, l.testname FROM testRequest t JOIN users u ON t.doctorid = u.userid JOIN patient p ON t.patientid = p.patientid JOIN labtest l ON t.labtestid = l.testid";
+                string query = "SELECT t.requestid p.name, p.gender, u.name, l.testname FROM testRequest t JOIN users u ON t.doctorid = u.userid JOIN patient p ON t.patientid = p.patientid JOIN labtest l ON t.labtestid = l.testid";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, conn))
