@@ -36,7 +36,7 @@ namespace SAD_APP
             if (dataGridView1.SelectedRows.Count > 0) // make sure user select at least 1 row 
             {
                 int requestId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["requestid"].Value);
-                int patientId = 
+               // int patientId = ;
 
                 string patientName = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
                 string patientGender = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;

@@ -60,7 +60,7 @@ namespace SAD_APP
             catch (SqlException ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
-                return null;
+                return (null, 0);
             }
 
         }
@@ -504,7 +504,7 @@ namespace SAD_APP
             {
                 conn.Open();
 
-                string query = "SELECT t.requestid p.name, p.gender, u.name, l.testname FROM testRequest t JOIN users u ON t.doctorid = u.userid JOIN patient p ON t.patientid = p.patientid JOIN labtest l ON t.labtestid = l.testid";
+                string query = "USE FinalHospital; SELECT t.requestid, p.name, p.gender, u.name AS doctor_name, l.testname FROM testRequest t JOIN users u ON t.doctorid = u.userid JOIN patient p ON t.patientid = p.patientid JOIN labtest l ON t.labtestid = l.testid";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, conn))
