@@ -153,6 +153,25 @@ namespace SAD_APP
                         }
                     }
                 }
+                else if (role == "technician")
+                {
+                    string insertTechnicianQuery = "USE FinalHospital; INSERT INTO LabTechnician(Name, ContactNumber, Email) VALUES(@Name, @ContactNumber, @Email)";
+
+                    using (SqlConnection conn = new SqlConnection(connstring))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(insertTechnicianQuery, conn))
+                        {
+                            conn.Open();
+
+                            cmd.Parameters.AddWithValue("@Name", fullname);
+                            cmd.Parameters.AddWithValue("@ContactNumber", phonenumber);
+                            cmd.Parameters.AddWithValue("@Email", email);
+
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                    }
+                }
 
                 MessageBox.Show("Account created successfully");
             }
@@ -404,8 +423,8 @@ namespace SAD_APP
             using (SqlConnection connection = new SqlConnection(connstring))
             {
                 connection.Open();
-                string query = "USE FinalHospital; INSERT INTO Prescription (DoctorID, PatientID, Medication, Dosage, Frequency) " +
-                    "VALUES(@doctorId, @patientId, @medication, @dosage, @frequency)";
+                string query = "USE FinalHospital; INSERT INTO Prescription (DoctorID, PatientID, Medication, Dosage, Frequency, PrescriptionDate) " +
+                    "VALUES(@doctorId, @patientId, @medication, @dosage, @frequency, @currentDate)";
 
                 //TODO: Find a way to automatically enter the current date in the database (because it is
                 //an attribute in the decision table)
@@ -418,6 +437,7 @@ namespace SAD_APP
                     command.Parameters.AddWithValue("@medication", medication);
                     command.Parameters.AddWithValue("@dosage", dosage);
                     command.Parameters.AddWithValue("@frequency", frequency);
+                    command.Parameters.AddWithValue("@currentDate", DateTime.Now.ToString("MM/dd/yyyy"));
                     command.ExecuteNonQuery();
                 }
             }
@@ -434,7 +454,7 @@ namespace SAD_APP
             using (SqlConnection conn = new SqlConnection(connstring))
             {
                 conn.Open();
-                string query = "SELECT PatientId FROM TestRequest WHERE RequestId = @requestid";
+                string query = "USE FinalHospital; SELECT PatientId FROM TestRequest WHERE RequestId = @requestid";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -459,7 +479,7 @@ namespace SAD_APP
             using (SqlConnection conn = new SqlConnection(connstring))
             {
                 conn.Open();
-                string query = "INSERT INTO TestResult (PatientID, RequestID, LabTechId, TestResult) VALUES (@patientid, @requestid, @labtechid, @testresult)";
+                string query = "USE FinalHospital; INSERT INTO TestResult (PatientID, RequestID, LabTechId, TestResult) VALUES (@patientid, @requestid, @labtechid, @testresult)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -541,6 +561,7 @@ namespace SAD_APP
 
             return dt;
         }
+
 
 
 

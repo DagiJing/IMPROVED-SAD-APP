@@ -67,5 +67,10 @@ namespace SAD_APP
             
             this.Close();
         }
+
+        private void role_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

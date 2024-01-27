@@ -194,12 +194,23 @@
             // 
             // role
             // 
+            this.role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.role.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.role.FormattingEnabled = true;
+            this.role.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.role.Items.AddRange(new object[] {
+            "administrator",
+            "receptionist",
+            "manager",
+            "triage",
+            "doctor",
+            "technician",
+            "pharmacy"});
             this.role.Location = new System.Drawing.Point(478, 29);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(121, 28);
             this.role.TabIndex = 2;
+            this.role.SelectedIndexChanged += new System.EventHandler(this.role_SelectedIndexChanged);
             // 
             // createbtn
             // 

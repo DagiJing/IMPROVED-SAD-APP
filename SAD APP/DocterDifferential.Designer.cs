@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListTest = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,24 +53,24 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(56, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Test Requests";
             // 
-            // checkedListBox1
+            // checkedListTest
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListTest.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListTest.FormattingEnabled = true;
+            this.checkedListTest.Items.AddRange(new object[] {
             "Stool Test",
             "Radiography",
             "Blood Test"});
-            this.checkedListBox1.Location = new System.Drawing.Point(72, 82);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(169, 76);
-            this.checkedListBox1.TabIndex = 1;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.checkedListTest.Location = new System.Drawing.Point(72, 82);
+            this.checkedListTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkedListTest.Name = "checkedListTest";
+            this.checkedListTest.Size = new System.Drawing.Size(169, 70);
+            this.checkedListTest.TabIndex = 1;
+            this.checkedListTest.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -124,7 +124,7 @@
             this.trackBar3.Location = new System.Drawing.Point(30, 331);
             this.trackBar3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(223, 45);
+            this.trackBar3.Size = new System.Drawing.Size(223, 56);
             this.trackBar3.TabIndex = 1;
             // 
             // textBox3
@@ -132,7 +132,7 @@
             this.textBox3.Location = new System.Drawing.Point(30, 295);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 25);
+            this.textBox3.Size = new System.Drawing.Size(223, 29);
             this.textBox3.TabIndex = 0;
             // 
             // trackBar2
@@ -140,7 +140,7 @@
             this.trackBar2.Location = new System.Drawing.Point(30, 205);
             this.trackBar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(223, 45);
+            this.trackBar2.Size = new System.Drawing.Size(223, 56);
             this.trackBar2.TabIndex = 1;
             // 
             // textBox2
@@ -148,7 +148,7 @@
             this.textBox2.Location = new System.Drawing.Point(30, 171);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 25);
+            this.textBox2.Size = new System.Drawing.Size(223, 29);
             this.textBox2.TabIndex = 0;
             // 
             // trackBar1
@@ -156,7 +156,7 @@
             this.trackBar1.Location = new System.Drawing.Point(30, 80);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(223, 45);
+            this.trackBar1.Size = new System.Drawing.Size(223, 56);
             this.trackBar1.TabIndex = 1;
             // 
             // textBox1
@@ -164,7 +164,7 @@
             this.textBox1.Location = new System.Drawing.Point(30, 46);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 25);
+            this.textBox1.Size = new System.Drawing.Size(223, 29);
             this.textBox1.TabIndex = 0;
             // 
             // panel1
@@ -178,7 +178,7 @@
             // 
             // DocterDifferential
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(561, 622);
@@ -186,7 +186,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.checkedListTest);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -207,7 +207,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListTest;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;

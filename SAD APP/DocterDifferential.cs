@@ -49,7 +49,22 @@ namespace SAD_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach(string testRequested in this.checkedListTest.CheckedItems)
+            {
+                if (testRequested =="Stool Test")
+                {
 
+
+                }else if(testRequested == "Radiography")
+                {
+
+                }
+                else
+                {
+
+                }
+        
+            }
         }
     }
 }
