@@ -23,6 +23,9 @@ namespace SAD_APP
             //this.loginPage = loginpage;
 
             dataGridView1.DataSource = MySQLConn.listOfRequestedTests();
+
+            dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            dataGridView1.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
         }
 
         private void LabTech_Load(object sender, EventArgs e)

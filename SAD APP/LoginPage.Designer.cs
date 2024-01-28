@@ -43,9 +43,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(222, 356);
+            this.checkBox1.Location = new System.Drawing.Point(201, 357);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(125, 20);
+            this.checkBox1.Size = new System.Drawing.Size(151, 24);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button2.Location = new System.Drawing.Point(222, 397);
+            this.button2.Location = new System.Drawing.Point(201, 409);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 29);
+            this.button2.Size = new System.Drawing.Size(117, 37);
             this.button2.TabIndex = 11;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
-            this.button1.Location = new System.Drawing.Point(115, 397);
+            this.button1.Location = new System.Drawing.Point(66, 409);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 29);
+            this.button1.Size = new System.Drawing.Size(127, 37);
             this.button1.TabIndex = 12;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 149);
+            this.panel1.Size = new System.Drawing.Size(374, 186);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -88,51 +88,52 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Moccasin;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 82);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 30);
+            this.label3.Size = new System.Drawing.Size(279, 48);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Account Login";
+            this.label3.Text = "Yanet Hospital";
             // 
             // staffPass
             // 
-            this.staffPass.Location = new System.Drawing.Point(115, 328);
+            this.staffPass.Location = new System.Drawing.Point(66, 318);
             this.staffPass.Name = "staffPass";
             this.staffPass.PasswordChar = '*';
-            this.staffPass.Size = new System.Drawing.Size(200, 22);
+            this.staffPass.Size = new System.Drawing.Size(249, 27);
             this.staffPass.TabIndex = 8;
             // 
             // staffUsername
             // 
-            this.staffUsername.Location = new System.Drawing.Point(115, 232);
+            this.staffUsername.Location = new System.Drawing.Point(66, 243);
             this.staffUsername.Name = "staffUsername";
-            this.staffUsername.Size = new System.Drawing.Size(200, 22);
+            this.staffUsername.Size = new System.Drawing.Size(249, 27);
             this.staffUsername.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 287);
+            this.label2.Location = new System.Drawing.Point(63, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 191);
+            this.label1.Location = new System.Drawing.Point(63, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Username";
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(373, 522);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.staffUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

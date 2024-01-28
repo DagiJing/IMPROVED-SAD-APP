@@ -28,6 +28,9 @@ namespace SAD_APP
             listOfPatient.DataSource = MySQLConn.listOfPatient();
             listOfPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             listOfPatient.Columns["PatientID"].Visible = true;
+
+            listOfPatient.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            listOfPatient.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
         }
 
         public void Triage_Load(object sender, EventArgs e)

@@ -18,6 +18,8 @@ namespace SAD_APP
             InitializeComponent();
             this.loginPage = loginPage;
             listOfMedication.DataSource = MySQLConn.GetPrescriptionData();
+            listOfMedication.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            listOfMedication.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
