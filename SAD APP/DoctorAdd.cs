@@ -77,5 +77,11 @@ namespace SAD_APP
             new DoctorDefinitive(this, patientID, this.doctorID).Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new MedicalCertificate(this).Show();
+            this.Hide();
+        }
     }
 }

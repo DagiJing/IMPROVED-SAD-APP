@@ -12,14 +12,22 @@ namespace SAD_APP
 {
     public partial class MedicalCertificate : Form
     {
-        public MedicalCertificate()
+        DoctorAdd doctorAdd;
+        public MedicalCertificate(DoctorAdd doctorAdd)
         {
             InitializeComponent();
+            this.doctorAdd = doctorAdd;
         }
 
         private void MedicalCertificate_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            doctorAdd.Show();
+            this.Close();
         }
     }
 }

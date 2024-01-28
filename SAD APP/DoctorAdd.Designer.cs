@@ -79,6 +79,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "View result";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox4
             // 
@@ -99,7 +100,7 @@
             this.patientClinical.Location = new System.Drawing.Point(29, 55);
             this.patientClinical.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientClinical.Name = "patientClinical";
-            this.patientClinical.Size = new System.Drawing.Size(118, 17);
+            this.patientClinical.Size = new System.Drawing.Size(139, 19);
             this.patientClinical.TabIndex = 0;
             this.patientClinical.Text = "Clinical Diagnosis";
             // 
@@ -122,7 +123,7 @@
             this.patientSymptoms.Location = new System.Drawing.Point(21, 41);
             this.patientSymptoms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientSymptoms.Name = "patientSymptoms";
-            this.patientSymptoms.Size = new System.Drawing.Size(131, 17);
+            this.patientSymptoms.Size = new System.Drawing.Size(160, 19);
             this.patientSymptoms.TabIndex = 0;
             this.patientSymptoms.Text = "Patient\'s Symptoms";
             // 
@@ -145,7 +146,7 @@
             this.patientHistory.Location = new System.Drawing.Point(21, 41);
             this.patientHistory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientHistory.Name = "patientHistory";
-            this.patientHistory.Size = new System.Drawing.Size(109, 17);
+            this.patientHistory.Size = new System.Drawing.Size(131, 19);
             this.patientHistory.TabIndex = 0;
             this.patientHistory.Text = "Patient\'s history";
             // 
@@ -156,7 +157,7 @@
             this.patientGenderTB.Location = new System.Drawing.Point(122, 40);
             this.patientGenderTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientGenderTB.Name = "patientGenderTB";
-            this.patientGenderTB.Size = new System.Drawing.Size(51, 17);
+            this.patientGenderTB.Size = new System.Drawing.Size(63, 20);
             this.patientGenderTB.TabIndex = 0;
             this.patientGenderTB.Text = "Gender";
             // 
@@ -167,7 +168,7 @@
             this.patientAgeTB.Location = new System.Drawing.Point(272, 40);
             this.patientAgeTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientAgeTB.Name = "patientAgeTB";
-            this.patientAgeTB.Size = new System.Drawing.Size(31, 17);
+            this.patientAgeTB.Size = new System.Drawing.Size(39, 20);
             this.patientAgeTB.TabIndex = 0;
             this.patientAgeTB.Text = "Age";
             // 
@@ -178,7 +179,7 @@
             this.patientNameTB.Location = new System.Drawing.Point(8, 40);
             this.patientNameTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientNameTB.Name = "patientNameTB";
-            this.patientNameTB.Size = new System.Drawing.Size(43, 17);
+            this.patientNameTB.Size = new System.Drawing.Size(52, 20);
             this.patientNameTB.TabIndex = 0;
             this.patientNameTB.Text = "Name";
             // 
@@ -226,7 +227,7 @@
             // 
             // DoctorAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(968, 541);
