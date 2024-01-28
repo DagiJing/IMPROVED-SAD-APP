@@ -18,7 +18,7 @@ namespace SAD_APP
         {
             InitializeComponent();
             this.loginPage = new LoginPage();
-            userID = userid;
+            userID = MySQLConn.GetLabTechID(userid);
 
             //this.loginPage = loginpage;
 

@@ -14,6 +14,7 @@ namespace SAD_APP
     {
         DoctorAdd doctorAdd;
         int patientId;
+        int doctorID;
 
         
 

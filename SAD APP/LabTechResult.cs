@@ -40,7 +40,17 @@ namespace SAD_APP
         {
             string testResult = richTextBox1.Text + richTextBox2.Text;
             int pid = MySQLConn.retrievePatientId(requestId);
-            MySQLConn.enterTestResults(pid, requestId, labtechId, testResult);
+            if(MySQLConn.enterTestResults(pid, requestId, labtechId, testResult))
+            {
+                MessageBox.Show("Result Entered successfully!");
+                labTech.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Result Couldn't be Entered!");
+            }
+
 
         }
     }

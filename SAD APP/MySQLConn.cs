@@ -474,23 +474,33 @@ namespace SAD_APP
             return patientid;
         }
         //Then actually insert the test results into the database
-        public static void enterTestResults (int patientId, int requestId, int labtechId, string testresult)
+        public static bool enterTestResults(int patientId, int requestId, int labtechId, string testresult)
         {
-            using (SqlConnection conn = new SqlConnection(connstring))
+            try
             {
-                conn.Open();
-                string query = "USE FinalHospital; INSERT INTO TestResult (PatientID, RequestID, LabTechId, TestResult) VALUES (@patientid, @requestid, @labtechid, @testresult)";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection(connstring))
                 {
-                    cmd.Parameters.AddWithValue("@patientid", patientId);
-                    cmd.Parameters.AddWithValue("@requestid", requestId);
-                    cmd.Parameters.AddWithValue("@labtechid", labtechId);
-                    cmd.Parameters.AddWithValue("@testresult", testresult);
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string query = "USE FinalHospital; INSERT INTO TestResult (PatientID, RequestID, LabTechId, TestResult) VALUES (@patientid, @requestid, @labtechid, @testresult)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@patientid", patientId);
+                        cmd.Parameters.AddWithValue("@requestid", requestId);
+                        cmd.Parameters.AddWithValue("@labtechid", labtechId);
+                        cmd.Parameters.AddWithValue("@testresult", testresult);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                return false;
             }
         }
+
 
 
 
@@ -537,34 +547,74 @@ namespace SAD_APP
             return requestedTests;
         }
 
-            // The list of Reviewed Patients
-            public static DataTable listOfReviewedPatient()
+        // The list of Reviewed Patients
+        public static DataTable listOfReviewedPatient()
+    {
+        DataTable dt = new DataTable();
+
+        using (SqlConnection conn = new SqlConnection(connstring))
         {
-            DataTable dt = new DataTable();
+            conn.Open();
+
+            string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient Where Reviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    dt.Load(dr);
+                }
+            }
+                
+            conn.Close();
+        }
+
+        return dt;
+    }
+
+        // To get the ID of the lab technician
+        public static int GetLabTechID(int userID)
+        {
+            string fetchNameQuery = "USE FinalHospital; SELECT Name FROM Users WHERE UserID = @userID";
+            string fetchIDQuery = "USE FinalHospital; SELECT LabTechID FROM LabTechnician WHERE Name = @name";
+            int labTechID = 0;
+            string name = "";
 
             using (SqlConnection conn = new SqlConnection(connstring))
             {
-                conn.Open();
-
-                string query = "use FinalHospital; select PatientID, Name, Age, Gender from Patient Where Reviewed = 1 AND (IsTreated = 0 OR IsTreated IS NULL) order by PatientID desc;";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(fetchNameQuery, conn))
                 {
-                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@userID", userID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
                     {
-                        dt.Load(dr);
+                        name = reader.GetString(0);
                     }
+
+                    conn.Close();
                 }
-                
-                conn.Close();
+
+                using (SqlCommand cmd = new SqlCommand(fetchIDQuery, conn))
+                {
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@name", name);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        labTechID = reader.GetInt32(0);
+                    }
+
+                    conn.Close();
+                }
             }
 
-            return dt;
+            return labTechID;
         }
-
-
-
-
 
 
 
