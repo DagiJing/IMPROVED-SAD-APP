@@ -646,6 +646,35 @@ namespace SAD_APP
         }
 
 
+        // Entering the lab request from the doctor
+        public static void EnterLabRequest(int doctorId, int labTestId, int patientId)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connstring))
+                {
+                    connection.Open();
+
+                    string insertQuery = "USE FinalHospital; INSERT INTO TestRequest(DoctorID, LabTestID, PatientID) VALUES (@DoctorID, @LabTestID, @PatientID)";
+                    using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                    {
+                        insertCommand.Parameters.AddWithValue("@DoctorID", doctorId);
+                        insertCommand.Parameters.AddWithValue("@LabTestID", labTestId);
+                        insertCommand.Parameters.AddWithValue("@PatientID", patientId);
+
+                        insertCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
 
     }
 }

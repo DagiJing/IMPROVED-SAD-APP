@@ -68,7 +68,7 @@ namespace SAD_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new DocterDifferential(this, this.doctorID).Show();
+            new DocterDifferential(this, this.doctorID, patientID).Show();
             this.Hide();
         }
 

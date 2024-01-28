@@ -14,11 +14,13 @@ namespace SAD_APP
     {
         DoctorAdd doctorAdd;
         int doctorID;
-        public DocterDifferential(DoctorAdd doctorAdd, int doctorID)
+        int patientID;
+        public DocterDifferential(DoctorAdd doctorAdd, int doctorID, int patientID)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
             this.doctorID = doctorID;
+            this.patientID = patientID;
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,18 +57,22 @@ namespace SAD_APP
             {
                 if (testRequested =="Stool Test")
                 {
+                    MySQLConn.EnterLabRequest(doctorID, 1, patientID);
+                    MessageBox.Show("here");
 
-
-                }else if(testRequested == "Radiography")
+                }
+                else if(testRequested == "Radiography")
                 {
-
+                    MySQLConn.EnterLabRequest(doctorID, 2, patientID);
                 }
                 else
                 {
-
+                    MySQLConn.EnterLabRequest(doctorID, 3, patientID);
                 }
         
             }
+            doctorAdd.Show();
+            this.Close();
         }
     }
 }
