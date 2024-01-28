@@ -31,8 +31,8 @@ namespace SAD_APP
             this.listOfReviewedPatient.DataSource = MySQLConn.listOfReviewedPatient();
             this.listOfReviewedPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.listOfReviewedPatient.Columns["PatientID"].Visible = false;
-            listOfReviewedPatient.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            listOfReviewedPatient.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            listOfReviewedPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listOfReviewedPatient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         private void Doctor_Load(object sender, EventArgs e)

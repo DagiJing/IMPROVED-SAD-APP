@@ -24,8 +24,8 @@ namespace SAD_APP
 
             dataGridView1.DataSource = MySQLConn.listOfRequestedTests();
 
-            dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            dataGridView1.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         private void LabTech_Load(object sender, EventArgs e)

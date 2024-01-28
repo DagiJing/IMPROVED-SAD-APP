@@ -27,16 +27,17 @@ namespace SAD_APP
             listOfUsers.Columns.Clear();
 
             listOfUsers.DataSource = MySQLConn.listOfUsers();
-            listOfUsers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            listOfUsers.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            listOfUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listOfUsers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
         }
 
         private void Administrator_Load(object sender, EventArgs e)
         {
             this.listOfUsers.DataSource = MySQLConn.listOfUsers();
-            listOfUsers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            listOfUsers.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            listOfUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listOfUsers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
 
         }
 

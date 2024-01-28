@@ -29,8 +29,8 @@ namespace SAD_APP
             listOfPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             listOfPatient.Columns["PatientID"].Visible = true;
 
-            listOfPatient.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            listOfPatient.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            listOfPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listOfPatient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         public void Triage_Load(object sender, EventArgs e)
