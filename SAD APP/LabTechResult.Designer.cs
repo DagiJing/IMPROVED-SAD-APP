@@ -43,7 +43,7 @@
             this.label1.Location = new System.Drawing.Point(88, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Test Result";
             // 
@@ -54,7 +54,7 @@
             this.label2.Location = new System.Drawing.Point(88, 234);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Special Notes";
             // 
@@ -108,7 +108,7 @@
             // 
             // LabTechResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(522, 511);
@@ -122,6 +122,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LabTechResult";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LabTechResult";
             this.Load += new System.EventHandler(this.LabTechResult_Load);
             this.ResumeLayout(false);

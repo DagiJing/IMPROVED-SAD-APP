@@ -112,6 +112,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Triage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Triage";
             this.Load += new System.EventHandler(this.Triage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listOfPatient)).EndInit();

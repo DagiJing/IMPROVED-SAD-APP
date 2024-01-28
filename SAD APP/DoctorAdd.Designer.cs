@@ -239,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DoctorAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorAdd";
             this.Load += new System.EventHandler(this.DoctorAdd_Load);
             this.groupBox1.ResumeLayout(false);

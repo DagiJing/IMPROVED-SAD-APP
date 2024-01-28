@@ -214,6 +214,7 @@
             // 
             // assignedDoc
             // 
+            this.assignedDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.assignedDoc.FormattingEnabled = true;
             this.assignedDoc.Location = new System.Drawing.Point(71, 654);
             this.assignedDoc.Margin = new System.Windows.Forms.Padding(4);
@@ -246,6 +247,7 @@
             // 
             // assignedRoom
             // 
+            this.assignedRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.assignedRoom.FormattingEnabled = true;
             this.assignedRoom.Location = new System.Drawing.Point(495, 654);
             this.assignedRoom.Margin = new System.Windows.Forms.Padding(4);
@@ -287,6 +289,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TriageAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TriageAdd";
             this.Load += new System.EventHandler(this.TriageAdd_Load);
             this.groupBox1.ResumeLayout(false);

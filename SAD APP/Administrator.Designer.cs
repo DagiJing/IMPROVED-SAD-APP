@@ -124,6 +124,7 @@
             this.Controls.Add(this.listOfUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
             this.Load += new System.EventHandler(this.Administrator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listOfUsers)).EndInit();

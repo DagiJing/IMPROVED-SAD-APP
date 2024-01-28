@@ -17,6 +17,7 @@ namespace SAD_APP
         {
             InitializeComponent();
             this.loginPage = loginPage;
+            listOfMedication.DataSource = MySQLConn.GetPrescriptionData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

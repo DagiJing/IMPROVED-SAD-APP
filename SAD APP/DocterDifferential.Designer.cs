@@ -191,6 +191,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DocterDifferential";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enter Differential Diagnosis";
             this.Load += new System.EventHandler(this.DocterDifferential_Load);
             this.groupBox1.ResumeLayout(false);

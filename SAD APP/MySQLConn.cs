@@ -676,6 +676,41 @@ namespace SAD_APP
             }
         }
 
+
+        // Retrieving the prescription for the Pharmacist
+        public static DataTable GetPrescriptionData()
+        {
+            string query = "USE FinalHospital; SELECT pa.Name, p.Medication, p.Dosage, p.Frequency FROM Prescription p INNER JOIN Patient pa ON p.PatientID = pa.PatientID;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connstring))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            return dataTable;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Error: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+        }
+
     }
 }
 

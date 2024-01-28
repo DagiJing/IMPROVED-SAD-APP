@@ -286,6 +286,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministratorAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministratorAdd";
             this.Load += new System.EventHandler(this.AdministratorAdd_Load);
             this.ResumeLayout(false);
