@@ -13,10 +13,12 @@ namespace SAD_APP
     public partial class DocterDifferential : Form
     {
         DoctorAdd doctorAdd;
-        public DocterDifferential(DoctorAdd doctorAdd)
+        int doctorID;
+        public DocterDifferential(DoctorAdd doctorAdd, int doctorID)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
+            this.doctorID = doctorID;
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -13,11 +13,13 @@ namespace SAD_APP
     public partial class Doctor : Form
     {
         LoginPage loginPage;
-        public Doctor(LoginPage loginpage)
+        int doctorID;
+        public Doctor(LoginPage loginpage,int doctorID)
         {
             InitializeComponent();
             this.loginPage = loginpage;
             refreshListOfReviewed();
+            this.doctorID = doctorID;
         }
 
         public void refreshListOfReviewed()
@@ -69,7 +71,7 @@ namespace SAD_APP
                 string patientAge = row.Cells["Age"].Value.ToString();
                 string patientGender = row.Cells["Gender"].Value.ToString();
 
-                new DoctorAdd(this, patientID, fullName, patientAge, patientGender).Show();
+                new DoctorAdd(this, patientID, fullName, patientAge, patientGender, this.doctorID).Show();
                 this.Hide();
             }
             else

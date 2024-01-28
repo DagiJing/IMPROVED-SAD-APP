@@ -14,13 +14,16 @@ namespace SAD_APP
     {
         Doctor doctor;
         int patientID;
+        int doctorID;
         
 
-        public DoctorAdd(Doctor doctor, int ID, string fullName, string patientAge, string patientGender)
+        public DoctorAdd(Doctor doctor, int ID, string fullName, string patientAge, string patientGender, int doctorID)
         {
             InitializeComponent();
             this.doctor = doctor; 
             this.patientID = ID;
+            this.doctorID = doctorID;
+
 
             //BG added start
             //(string patientName, string gender, int age) = MySQLConn.RetrieveGeneralInfo(patientID);
@@ -65,13 +68,13 @@ namespace SAD_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new DocterDifferential(this).Show();
+            new DocterDifferential(this, this.doctorID).Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new DoctorDefinitive(this, patientID).Show();
+            new DoctorDefinitive(this, patientID, this.doctorID).Show();
             this.Hide();
         }
     }

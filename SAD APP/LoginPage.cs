@@ -42,7 +42,7 @@ namespace SAD_APP
                         new Administrator(this).Show();
                         break;
                     case "doctor":
-                        new Doctor(this).Show();
+                        new Doctor(this, userid).Show();
                         break;
                     case "technician":
                         new LabTech(this, userid).Show();

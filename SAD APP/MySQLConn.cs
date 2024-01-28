@@ -65,6 +65,7 @@ namespace SAD_APP
 
         }
 
+
         // Fetch all the users for Admin
         public static DataTable listOfUsers() {
             try
@@ -95,6 +96,7 @@ namespace SAD_APP
             }
 
         }
+
 
         // Create a user for Admin
         public static void createUser(string fullname, int phonenumber, string email, string specialization, string username, string role, string newpass)
@@ -181,6 +183,7 @@ namespace SAD_APP
             }
         }
 
+
         // Delete a User
         public static bool deleteUser(string username)
         {
@@ -208,6 +211,7 @@ namespace SAD_APP
             }
         }
 
+
         // To register Patients 
         public static void registerPatient(string fullName, int age, string gender, string city, int phoneNumber, string email)
         {
@@ -228,6 +232,7 @@ namespace SAD_APP
             }
             MessageBox.Show("Record created successfully!");
         }
+
 
         // The list of unreviewed Patients
         public static DataTable listOfPatient()
@@ -251,6 +256,7 @@ namespace SAD_APP
 
             return dt;
         }
+
 
         // To get the list of Doctors
         public static List<string> GetDoctorNames()
@@ -279,6 +285,7 @@ namespace SAD_APP
             return doctorNames;
         }
 
+
         // To get the list of Vacant Rooms
         public static List<string> GetVacantRooms()
         {
@@ -304,6 +311,7 @@ namespace SAD_APP
 
             return vacantRooms;
         }
+
 
         // To register patient's Clinical Diagnosis
         public static bool registerClinical(int ID, string clinical, string history, string symptom, string assignedDoc, int assignedRoom)
@@ -384,6 +392,7 @@ namespace SAD_APP
             }
         }
 
+
         //BG ADDED HERE
         //Getting the diagnosis information
         public static (string, string, string) RetrieveDiagnosisAndSymptoms(int patientID)
@@ -417,31 +426,38 @@ namespace SAD_APP
             return (clinicalDiagnosis, symptoms, history);
         }
 
+
         //Adding the prescription form details
-        public static void addPrescription (int patientId, int doctorId, string medication, string dosage, string frequency)
+        public static bool addPrescription(int patientId, int doctorId, string medication, string dosage, string frequency)
         {
-            using (SqlConnection connection = new SqlConnection(connstring))
+            try
             {
-                connection.Open();
-                string query = "USE FinalHospital; INSERT INTO Prescription (DoctorID, PatientID, Medication, Dosage, Frequency, PrescriptionDate) " +
-                    "VALUES(@doctorId, @patientId, @medication, @dosage, @frequency, @currentDate)";
-
-                //TODO: Find a way to automatically enter the current date in the database (because it is
-                //an attribute in the decision table)
-                //PrescriptionID (the PK) will generate automatically right?
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(connstring))
                 {
-                    command.Parameters.AddWithValue("@patientId", patientId);
-                    command.Parameters.AddWithValue("@doctorId", doctorId);
-                    command.Parameters.AddWithValue("@medication", medication);
-                    command.Parameters.AddWithValue("@dosage", dosage);
-                    command.Parameters.AddWithValue("@frequency", frequency);
-                    command.Parameters.AddWithValue("@currentDate", DateTime.Now.ToString("MM/dd/yyyy"));
-                    command.ExecuteNonQuery();
+                    connection.Open();
+                    string query = "USE FinalHospital; INSERT INTO Prescription (DoctorID, PatientID, Medication, Dosage, Frequency, PrescriptionDate) " +
+                        "VALUES(@doctorId, @patientId, @medication, @dosage, @frequency, @currentDate)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@patientId", patientId);
+                        command.Parameters.AddWithValue("@doctorId", doctorId);
+                        command.Parameters.AddWithValue("@medication", medication);
+                        command.Parameters.AddWithValue("@dosage", dosage);
+                        command.Parameters.AddWithValue("@frequency", frequency);
+                        command.Parameters.AddWithValue("@currentDate", DateTime.Now.ToString("MM/dd/yyyy"));
+                        command.ExecuteNonQuery();
+                    }
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                return false;
             }
         }
+
 
         //BG ADDED
 
@@ -473,6 +489,8 @@ namespace SAD_APP
             }
             return patientid;
         }
+
+
         //Then actually insert the test results into the database
         public static bool enterTestResults(int patientId, int requestId, int labtechId, string testresult)
         {
@@ -503,31 +521,40 @@ namespace SAD_APP
 
 
 
-
         //Adding the definitive diagnosis
-        public static void addDefinitive (int patientId, string definitive)
+        public static bool addDefinitive(int patientId, string definitive)
         {
-            using (SqlConnection connection = new SqlConnection(connstring))
+            try
             {
-                connection.Open();
-                string updateQuery = "USE FinalHospital UPDATE Diagnosis SET DefinitiveDiagnosis = @definitiveDiagnosis WHERE PatientId = @patientId;";
-
-                using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                using (SqlConnection connection = new SqlConnection(connstring))
                 {
-                    command.Parameters.AddWithValue("@definitiveDiagnosis", definitive);
-                    command.Parameters.AddWithValue("@patientId", patientId);
-                   
-                    command.ExecuteNonQuery();
+                    connection.Open();
+                    string updateQuery = "USE FinalHospital UPDATE Diagnosis SET DefinitiveDiagnosis = @definitiveDiagnosis WHERE PatientId = @patientId;";
+
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@definitiveDiagnosis", definitive);
+                        command.Parameters.AddWithValue("@patientId", patientId);
+
+                        command.ExecuteNonQuery();
+                    }
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                return false;
             }
         }
-        
-            //BG ADDED END
 
 
-            //BG ADDED AGAIN
-            //Getting the data for the list of requested tests
-            public static DataTable listOfRequestedTests()
+        //BG ADDED END
+
+
+        //BG ADDED AGAIN
+        //Getting the data for the list of requested tests
+        public static DataTable listOfRequestedTests()
         {
             DataTable requestedTests = new DataTable();
             using (SqlConnection conn = new SqlConnection(connstring))
@@ -546,6 +573,7 @@ namespace SAD_APP
             }
             return requestedTests;
         }
+
 
         // The list of Reviewed Patients
         public static DataTable listOfReviewedPatient()
@@ -571,6 +599,7 @@ namespace SAD_APP
 
         return dt;
     }
+
 
         // To get the ID of the lab technician
         public static int GetLabTechID(int userID)

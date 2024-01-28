@@ -18,11 +18,12 @@ namespace SAD_APP
 
         
 
-        public DoctorDefinitive(DoctorAdd doctorAdd, int patientId)
+        public DoctorDefinitive(DoctorAdd doctorAdd, int patientId, int doctorID)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
             this.patientId = patientId;
+            this.doctorID = doctorID;  
         }
 
 
@@ -56,20 +57,23 @@ namespace SAD_APP
             string definitive = definitiveTB.Text;
 
             //A mechanism to get the doctor ID of the doctor currently entering the details
-            int doctorId = 0;
+            // When creating a doctor, i made sure the UserID and the DoctorID are the same
+       
 
             try
             {
-                MySQLConn.addPrescription(patientId, doctorId, medication, dosage, frequency);
-                MySQLConn.addDefinitive(patientId, definitive);
-
-                if (/*TODO: Condition to check if entry was successful*/ true)
+                if (MySQLConn.addPrescription(patientId, this.doctorID, medication, dosage, frequency) && MySQLConn.addDefinitive(patientId, definitive))
                 {
                     MessageBox.Show("Definitive diagnosis entry was successful");
 
                     /*Here should we allow the doctor to enter another diagnosis (if that is the case) just
                      by clearning the entry fields or would that create a logic problem?
                      */
+
+                    /*I think after the doctor enters the information, it should go back to the DoctorAdd page(it requires more logic for multiple entry )*/
+
+                    doctorAdd.Show();
+                    this.Close();
                     
                 }
             }
