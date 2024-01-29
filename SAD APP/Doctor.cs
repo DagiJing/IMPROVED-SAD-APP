@@ -77,7 +77,7 @@ namespace SAD_APP
             }
             else
             {
-                MessageBox.Show("Please select a patient!");
+                MessageBox.Show("Please select a patient.");
             }
         }
 

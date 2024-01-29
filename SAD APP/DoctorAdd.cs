@@ -25,7 +25,7 @@ namespace SAD_APP
             this.doctorID = doctorID;
 
 
-            //BG added start
+            
             //(string patientName, string gender, int age) = MySQLConn.RetrieveGeneralInfo(patientID);
 
             patientNameTB.Text = fullName;
@@ -38,7 +38,7 @@ namespace SAD_APP
             patientClinical.Text = clinicalDiagnosis;
 
 
-            //BG ADDED END
+            
          }
 
         private void label7_Click(object sender, EventArgs e)
