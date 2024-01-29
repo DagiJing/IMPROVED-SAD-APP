@@ -43,7 +43,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(201, 357);
+            this.checkBox1.Location = new System.Drawing.Point(219, 362);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(151, 24);
             this.checkBox1.TabIndex = 13;
@@ -55,7 +55,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button2.Location = new System.Drawing.Point(201, 409);
+            this.button2.Location = new System.Drawing.Point(253, 409);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 37);
             this.button2.TabIndex = 11;
@@ -66,7 +66,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
-            this.button1.Location = new System.Drawing.Point(66, 409);
+            this.button1.Location = new System.Drawing.Point(120, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 37);
             this.button1.TabIndex = 12;
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 186);
+            this.panel1.Size = new System.Drawing.Size(723, 186);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -89,15 +89,15 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Moccasin;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 77);
+            this.label3.Location = new System.Drawing.Point(115, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 48);
+            this.label3.Size = new System.Drawing.Size(286, 50);
             this.label3.TabIndex = 6;
             this.label3.Text = "Yanet Hospital";
             // 
             // staffPass
             // 
-            this.staffPass.Location = new System.Drawing.Point(66, 318);
+            this.staffPass.Location = new System.Drawing.Point(121, 318);
             this.staffPass.Name = "staffPass";
             this.staffPass.PasswordChar = '*';
             this.staffPass.Size = new System.Drawing.Size(249, 27);
@@ -105,7 +105,7 @@
             // 
             // staffUsername
             // 
-            this.staffUsername.Location = new System.Drawing.Point(66, 243);
+            this.staffUsername.Location = new System.Drawing.Point(120, 243);
             this.staffUsername.Name = "staffUsername";
             this.staffUsername.Size = new System.Drawing.Size(249, 27);
             this.staffUsername.TabIndex = 9;
@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 295);
+            this.label2.Location = new System.Drawing.Point(120, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 7;
@@ -122,7 +122,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 220);
+            this.label1.Location = new System.Drawing.Point(116, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 6;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(373, 522);
+            this.ClientSize = new System.Drawing.Size(558, 522);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
