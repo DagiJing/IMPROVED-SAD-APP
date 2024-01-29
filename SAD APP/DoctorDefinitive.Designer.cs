@@ -66,7 +66,7 @@
             this.frequencyTB.Location = new System.Drawing.Point(182, 130);
             this.frequencyTB.Margin = new System.Windows.Forms.Padding(4);
             this.frequencyTB.Name = "frequencyTB";
-            this.frequencyTB.Size = new System.Drawing.Size(166, 27);
+            this.frequencyTB.Size = new System.Drawing.Size(166, 23);
             this.frequencyTB.TabIndex = 1;
             // 
             // dosageTB
@@ -74,7 +74,7 @@
             this.dosageTB.Location = new System.Drawing.Point(182, 89);
             this.dosageTB.Margin = new System.Windows.Forms.Padding(4);
             this.dosageTB.Name = "dosageTB";
-            this.dosageTB.Size = new System.Drawing.Size(166, 27);
+            this.dosageTB.Size = new System.Drawing.Size(166, 23);
             this.dosageTB.TabIndex = 1;
             // 
             // medicationTB
@@ -82,17 +82,17 @@
             this.medicationTB.Location = new System.Drawing.Point(182, 48);
             this.medicationTB.Margin = new System.Windows.Forms.Padding(4);
             this.medicationTB.Name = "medicationTB";
-            this.medicationTB.Size = new System.Drawing.Size(254, 27);
+            this.medicationTB.Size = new System.Drawing.Size(254, 23);
             this.medicationTB.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 139);
+            this.label3.Location = new System.Drawing.Point(64, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Frequency:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -104,7 +104,7 @@
             this.label2.Location = new System.Drawing.Point(78, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dosage:";
             // 
@@ -112,10 +112,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 48);
+            this.label1.Location = new System.Drawing.Point(58, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medication:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -128,7 +128,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(520, 176);
+            this.groupBox2.Size = new System.Drawing.Size(450, 168);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Definitive Diagnosis";
@@ -138,7 +138,7 @@
             this.definitiveTB.Location = new System.Drawing.Point(46, 28);
             this.definitiveTB.Margin = new System.Windows.Forms.Padding(4);
             this.definitiveTB.Name = "definitiveTB";
-            this.definitiveTB.Size = new System.Drawing.Size(390, 125);
+            this.definitiveTB.Size = new System.Drawing.Size(349, 119);
             this.definitiveTB.TabIndex = 0;
             this.definitiveTB.Text = "";
             // 
@@ -172,10 +172,10 @@
             // 
             // DoctorDefinitive
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(663, 581);
+            this.ClientSize = new System.Drawing.Size(604, 581);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
