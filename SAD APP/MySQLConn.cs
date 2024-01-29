@@ -725,6 +725,42 @@ namespace SAD_APP
             }
         }
 
+        //Retrieving financial information
+        public static (int labRevenue, int admissionRevenue) getFinancialInfo()
+        {
+            int labRevenue = 0;
+            int admissionRevenue = 0;
+
+            string query = "SELECT (SELECT SUM(lt.TestCost) FROM TestRequest tr JOIN LabTest lt ON tr.[Lab TestID] = lt.TestID) AS TotalLabTestRevenue, (SELECT COUNT(*) * 500 FROM Admission) AS TotalAdmissionRevenue";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connstring))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                labRevenue = reader.GetInt32(0);
+                                admissionRevenue = reader.GetInt32(1);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Apologies, the financial information for today is not available");
+            }
+
+            return (labRevenue, admissionRevenue);
+        }
+
 
         // Retrieving the prescription for the Pharmacist
         public static DataTable GetPrescriptionData()

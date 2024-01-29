@@ -17,10 +17,19 @@ namespace SAD_APP
         public Manager(LoginPage loginPage)
         {
             InitializeComponent();
+
+            int totalLabRevenue, totalAdmissionRevenue;
+            var financialInfo = MySQLConn.getFinancialInfo();
+
+            totalAdmissionRevenue = financialInfo.admissionRevenue;
+            totalLabRevenue = financialInfo.labRevenue;
+
             this.chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
-            this.chart1.Series["Series1"].Points.AddXY("Category1", 50);
-            this.chart1.Series["Series1"].Points.AddXY("Category2", 25);
-            this.chart1.Series["Series1"].Points.AddXY("Category3", 25);
+            this.chart1.Series["Series1"].Points.AddXY("Admission Revenue", totalAdmissionRevenue);
+            this.chart1.Series["Series1"].Points.AddXY("Laboratory Revenue", totalLabRevenue);
+
+            //this.chart1.Series["Series1"].Points.AddXY("Category3", 25);
+
             this.loginPage = loginPage;
         }
 
