@@ -156,6 +156,7 @@ namespace SAD_APP
                         }
                     }
                 }
+
                 else if (role == "technician")
                 {
                     string insertTechnicianQuery = "USE FinalHospital; INSERT INTO LabTechnician(Name, ContactNumber, Email) VALUES(@Name, @ContactNumber, @Email)";

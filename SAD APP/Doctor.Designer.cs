@@ -33,6 +33,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listOfReviewedPatient)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,7 +45,7 @@
             // 
             this.listOfReviewedPatient.AllowDrop = true;
             this.listOfReviewedPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listOfReviewedPatient.Location = new System.Drawing.Point(196, 128);
+            this.listOfReviewedPatient.Location = new System.Drawing.Point(196, 149);
             this.listOfReviewedPatient.Margin = new System.Windows.Forms.Padding(4);
             this.listOfReviewedPatient.MultiSelect = false;
             this.listOfReviewedPatient.Name = "listOfReviewedPatient";
@@ -50,7 +54,7 @@
             this.listOfReviewedPatient.RowTemplate.Height = 24;
             this.listOfReviewedPatient.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.listOfReviewedPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listOfReviewedPatient.Size = new System.Drawing.Size(372, 299);
+            this.listOfReviewedPatient.Size = new System.Drawing.Size(372, 278);
             this.listOfReviewedPatient.TabIndex = 0;
             this.listOfReviewedPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listOfReviewedPatient_CellContentClick);
             // 
@@ -61,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(178, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 31);
+            this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reviewed Patient";
             // 
@@ -103,12 +107,52 @@
             this.panel1.Size = new System.Drawing.Size(595, 95);
             this.panel1.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(201, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ID No.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(307, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(418, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Age";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(512, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Gender";
+            // 
             // Doctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(619, 440);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listOfReviewedPatient);
@@ -123,6 +167,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +177,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView listOfReviewedPatient;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

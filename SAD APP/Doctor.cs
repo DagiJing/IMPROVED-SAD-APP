@@ -27,10 +27,9 @@ namespace SAD_APP
             this.listOfReviewedPatient.DataSource = null;
             this.listOfReviewedPatient.Rows.Clear();
             this.listOfReviewedPatient.Columns.Clear();
-            this.listOfReviewedPatient.DataSource = null;
             this.listOfReviewedPatient.DataSource = MySQLConn.listOfReviewedPatient();
             this.listOfReviewedPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.listOfReviewedPatient.Columns["PatientID"].Visible = false;
+            //this.listOfReviewedPatient.Columns["PatientID"].Visible = false;
             listOfReviewedPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             listOfReviewedPatient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
@@ -60,8 +59,8 @@ namespace SAD_APP
                 // If any cell is empty, show a message and return
                 if (rowHasEmptyCell)
                 {
-                    //TODO: Replace message with something more medical and try to see why/when this condition occurs
-                    MessageBox.Show("The selected row contains an empty cell. Please select a complete row.");
+                    
+                    MessageBox.Show("Please select a complete row.");
                     return;
                 }
 
@@ -78,7 +77,7 @@ namespace SAD_APP
             }
             else
             {
-                MessageBox.Show("Please select a row!");
+                MessageBox.Show("Please select a patient!");
             }
         }
 
