@@ -128,7 +128,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(450, 168);
+            this.groupBox2.Size = new System.Drawing.Size(520, 176);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Definitive Diagnosis";
@@ -138,7 +138,7 @@
             this.definitiveTB.Location = new System.Drawing.Point(46, 28);
             this.definitiveTB.Margin = new System.Windows.Forms.Padding(4);
             this.definitiveTB.Name = "definitiveTB";
-            this.definitiveTB.Size = new System.Drawing.Size(349, 119);
+            this.definitiveTB.Size = new System.Drawing.Size(390, 125);
             this.definitiveTB.TabIndex = 0;
             this.definitiveTB.Text = "";
             // 
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(604, 581);
+            this.ClientSize = new System.Drawing.Size(663, 581);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);

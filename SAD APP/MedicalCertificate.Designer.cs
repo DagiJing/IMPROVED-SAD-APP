@@ -48,12 +48,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 27);
+            this.label1.Location = new System.Drawing.Point(42, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medical Certificate";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -151,7 +152,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.MediumBlue;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(60, 387);
+            this.button1.Location = new System.Drawing.Point(60, 413);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 33);
@@ -164,7 +165,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Crimson;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(455, 4);
+            this.button2.Location = new System.Drawing.Point(500, 4);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 33);
@@ -180,7 +181,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 58);
+            this.panel1.Size = new System.Drawing.Size(598, 58);
             this.panel1.TabIndex = 4;
             // 
             // MedicalCertificate
@@ -188,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(577, 486);
+            this.ClientSize = new System.Drawing.Size(645, 486);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
