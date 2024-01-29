@@ -39,10 +39,7 @@ namespace SAD_APP
 
 
             //BG ADDED END
-
-
-
-        }
+         }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -85,7 +82,12 @@ namespace SAD_APP
             //might need to make MDI
             new LabTestResult(this, patientID).Show();
 
-            //this.Hide();
+            
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

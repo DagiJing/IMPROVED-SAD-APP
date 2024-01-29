@@ -31,6 +31,7 @@ namespace SAD_APP
         {
             this.TestResult = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TestResult
@@ -40,9 +41,9 @@ namespace SAD_APP
             this.TestResult.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TestResult.Location = new System.Drawing.Point(71, 64);
             this.TestResult.Name = "TestResult";
-            this.TestResult.Size = new System.Drawing.Size(114, 24);
+            this.TestResult.Size = new System.Drawing.Size(206, 24);
             this.TestResult.TabIndex = 1;
-            this.TestResult.Text = "Test Result";
+            this.TestResult.Text = "Labratory Test Result";
             this.TestResult.Click += new System.EventHandler(this.label1_Click);
             // 
             // richTextBox1
@@ -51,10 +52,23 @@ namespace SAD_APP
             this.richTextBox1.Location = new System.Drawing.Point(75, 101);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(402, 215);
+            this.richTextBox1.Size = new System.Drawing.Size(437, 252);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(514, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LabTestResult
             // 
@@ -62,6 +76,7 @@ namespace SAD_APP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(635, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.TestResult);
             this.Name = "LabTestResult";
@@ -76,5 +91,6 @@ namespace SAD_APP
 
         private System.Windows.Forms.Label TestResult;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
