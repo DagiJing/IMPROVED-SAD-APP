@@ -75,9 +75,9 @@
             this.button5.Location = new System.Drawing.Point(788, 253);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 38);
+            this.button5.Size = new System.Drawing.Size(119, 52);
             this.button5.TabIndex = 1;
-            this.button5.Text = "View result";
+            this.button5.Text = "View Lab Result";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 

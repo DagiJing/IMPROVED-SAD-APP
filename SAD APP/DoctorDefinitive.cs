@@ -81,7 +81,7 @@ namespace SAD_APP
             {
                 MessageBox.Show("An error occurred: " + err.Message);
             }
-            
+            //medical certificate
 
             //BG ADDED END
         }

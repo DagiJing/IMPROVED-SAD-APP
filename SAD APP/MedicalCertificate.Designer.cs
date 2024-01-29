@@ -51,7 +51,7 @@
             this.label1.Location = new System.Drawing.Point(42, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 31);
+            this.label1.Size = new System.Drawing.Size(240, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medical Certificate";
             // 
@@ -65,6 +65,7 @@
             this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -157,6 +158,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Print ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

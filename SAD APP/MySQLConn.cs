@@ -575,6 +575,24 @@ namespace SAD_APP
             return requestedTests;
         }
 
+        //Sish added
+        public static string retrieveTestResult(int patientID)
+        {
+            string testResult = "";
+            using (SqlConnection conn = new SqlConnection (connstring))
+            {
+                conn.Open();
+
+                string query = "USE FinalHospital; SELECT TestResult FROM TestResult WHERE PatientID = @patientID";
+                using (SqlCommand cmd = new SqlCommand (query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@patientID", patientID);
+
+                    testResult = cmd.ExecuteReader().ToString();
+                }
+            }
+            return testResult;
+        }
 
         // The list of Reviewed Patients
         public static DataTable listOfReviewedPatient()

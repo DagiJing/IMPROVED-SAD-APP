@@ -80,8 +80,12 @@ namespace SAD_APP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new MedicalCertificate(this).Show();
-            this.Hide();
+            //new MedicalCertificate(this).Show();
+
+            //might need to make MDI
+            new LabTestResult(this, patientID).Show();
+
+            //this.Hide();
         }
     }
 }
