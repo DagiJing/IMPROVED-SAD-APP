@@ -263,7 +263,7 @@ namespace SAD_APP
         public static List<string> GetDoctorNames()
         {
 
-            string query = "use FinalHospital; SELECT Name FROM Users WHERE Role = 'doctor'";
+            string query = "use FinalHospital; SELECT Name FROM Users WHERE Role = 'doctor' AND Available = 1";
 
             List<string> doctorNames = new List<string>();
 
