@@ -15,15 +15,17 @@ namespace SAD_APP
         DoctorAdd doctorAdd;
         int patientId;
         int doctorID;
+        string definitive = "";
 
-        
+
 
         public DoctorDefinitive(DoctorAdd doctorAdd, int patientId, int doctorID)
         {
             InitializeComponent();
             this.doctorAdd = doctorAdd;
             this.patientId = patientId;
-            this.doctorID = doctorID;  
+            this.doctorID = doctorID;
+            button3.Visible = false;
         }
 
 
@@ -54,11 +56,13 @@ namespace SAD_APP
             string medication = medicationTB.Text;
             string dosage = dosageTB.Text;
             string frequency = frequencyTB.Text;
-            string definitive = definitiveTB.Text;
+            definitive += definitiveTB.Text;
 
             //A mechanism to get the doctor ID of the doctor currently entering the details
             // When creating a doctor, i made sure the UserID and the DoctorID are the same
-       
+
+            button3.Visible = true;
+
 
             try
             {
@@ -84,6 +88,16 @@ namespace SAD_APP
             //medical certificate
 
             //BG ADDED END
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            new MedicalCertificate(this, patientId, definitive).Show();
         }
     }
 }

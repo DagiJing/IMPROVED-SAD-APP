@@ -12,21 +12,37 @@ namespace SAD_APP
 {
     public partial class MedicalCertificate : Form
     {
-        DoctorAdd doctorAdd;
-        public MedicalCertificate(DoctorAdd doctorAdd)
+        DoctorDefinitive doctorDefinitive;
+        int patientID;
+        string definitiveDiagnosis;
+        public MedicalCertificate(DoctorDefinitive doctorDefinitive, int patientID, string definitiveDiagnosis)
         {
             InitializeComponent();
-            this.doctorAdd = doctorAdd;
+            this.doctorDefinitive = doctorDefinitive;
+            this.patientID = patientID;
+            this.definitiveDiagnosis = definitiveDiagnosis;
+
+           
+            string definitive = doctorDefinitive.ToString();
+
+            (string pname, int page, string pcontactNumber, string pgender) = MySQLConn.getPatientInfo(patientID);
+
+            nameTB.Text = pname;
+            ageTB.Text = page.ToString();
+            phoneNumberTB.Text = pcontactNumber;
+            genderTB.Text = pgender;
+            definitiveTB.Text = definitive;
+
         }
 
         private void MedicalCertificate_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            doctorAdd.Show();
+            doctorDefinitive.Show();
             this.Close();
         }
 
@@ -41,6 +57,11 @@ namespace SAD_APP
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameTB_TextChanged(object sender, EventArgs e)
         {
 
         }

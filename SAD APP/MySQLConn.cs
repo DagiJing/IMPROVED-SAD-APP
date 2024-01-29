@@ -286,6 +286,35 @@ namespace SAD_APP
             return doctorNames;
         }
 
+        //Getting patient information for medical certificate
+        public static (string name, int age, string contactNumber, string gender) getPatientInfo (int patientId)
+        {
+            string query = "USE FinalHospital; SELECT Name, Age, Gender, ContactNumber FROM Patient WHERE PatientID = @patientId";
+            string name = "";
+            int age = 0;
+            string contactNumber = "";
+            string gender = "";
+
+            using (SqlConnection conn = new SqlConnection (connstring))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            name = reader["Name"].ToString();
+                            age = Convert.ToInt32(reader["Age"]);
+                            contactNumber = reader["ContactNumber"].ToString();
+                            gender = reader["Gender"].ToString();
+                        }
+                    }
+                }
+            }
+            return (name, age, contactNumber, gender);
+        }
 
         // To get the list of Vacant Rooms
         public static List<string> GetVacantRooms()

@@ -34,12 +34,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nameTB = new System.Windows.Forms.TextBox();
+            this.ageTB = new System.Windows.Forms.TextBox();
+            this.phoneNumberTB = new System.Windows.Forms.TextBox();
+            this.genderTB = new System.Windows.Forms.TextBox();
+            this.restTB = new System.Windows.Forms.TextBox();
+            this.dateTB = new System.Windows.Forms.TextBox();
+            this.definitiveTB = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +57,7 @@
             this.label1.Location = new System.Drawing.Point(42, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 31);
+            this.label1.Size = new System.Drawing.Size(195, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medical Certificate";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -60,10 +66,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(56, 100);
+            this.label2.Location = new System.Drawing.Point(64, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 23);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -72,10 +78,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Azure;
-            this.label3.Location = new System.Drawing.Point(56, 169);
+            this.label3.Location = new System.Drawing.Point(64, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 23);
+            this.label3.Size = new System.Drawing.Size(36, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Age";
             // 
@@ -83,10 +89,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Azure;
-            this.label4.Location = new System.Drawing.Point(358, 169);
+            this.label4.Location = new System.Drawing.Point(365, 167);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 23);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Gender";
             // 
@@ -94,10 +100,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Azure;
-            this.label5.Location = new System.Drawing.Point(361, 306);
+            this.label5.Location = new System.Drawing.Point(367, 320);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 23);
+            this.label5.Size = new System.Drawing.Size(41, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Date";
             // 
@@ -105,39 +111,27 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Azure;
-            this.label6.Location = new System.Drawing.Point(358, 100);
+            this.label6.Location = new System.Drawing.Point(361, 97);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 23);
+            this.label6.Size = new System.Drawing.Size(112, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Phone Number";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Azure;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(42, 46);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 23);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Description";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Azure;
-            this.label8.Location = new System.Drawing.Point(361, 235);
+            this.label8.Location = new System.Drawing.Point(364, 248);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 23);
+            this.label8.Size = new System.Drawing.Size(102, 20);
             this.label8.TabIndex = 1;
             this.label8.Text = "Rest Required";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.definitiveTB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(60, 235);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -184,12 +178,69 @@
             this.panel1.Size = new System.Drawing.Size(598, 58);
             this.panel1.TabIndex = 4;
             // 
+            // nameTB
+            // 
+            this.nameTB.Location = new System.Drawing.Point(62, 127);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(100, 25);
+            this.nameTB.TabIndex = 5;
+            this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
+            // 
+            // ageTB
+            // 
+            this.ageTB.Location = new System.Drawing.Point(62, 196);
+            this.ageTB.Name = "ageTB";
+            this.ageTB.Size = new System.Drawing.Size(100, 25);
+            this.ageTB.TabIndex = 6;
+            // 
+            // phoneNumberTB
+            // 
+            this.phoneNumberTB.Location = new System.Drawing.Point(362, 128);
+            this.phoneNumberTB.Name = "phoneNumberTB";
+            this.phoneNumberTB.Size = new System.Drawing.Size(111, 25);
+            this.phoneNumberTB.TabIndex = 7;
+            // 
+            // genderTB
+            // 
+            this.genderTB.Location = new System.Drawing.Point(363, 202);
+            this.genderTB.Name = "genderTB";
+            this.genderTB.Size = new System.Drawing.Size(60, 25);
+            this.genderTB.TabIndex = 8;
+            // 
+            // restTB
+            // 
+            this.restTB.Location = new System.Drawing.Point(364, 283);
+            this.restTB.Name = "restTB";
+            this.restTB.Size = new System.Drawing.Size(100, 25);
+            this.restTB.TabIndex = 9;
+            // 
+            // dateTB
+            // 
+            this.dateTB.Location = new System.Drawing.Point(366, 351);
+            this.dateTB.Name = "dateTB";
+            this.dateTB.Size = new System.Drawing.Size(100, 25);
+            this.dateTB.TabIndex = 10;
+            // 
+            // definitiveTB
+            // 
+            this.definitiveTB.Location = new System.Drawing.Point(8, 25);
+            this.definitiveTB.Name = "definitiveTB";
+            this.definitiveTB.Size = new System.Drawing.Size(235, 111);
+            this.definitiveTB.TabIndex = 0;
+            this.definitiveTB.Text = "";
+            // 
             // MedicalCertificate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(645, 486);
+            this.Controls.Add(this.dateTB);
+            this.Controls.Add(this.restTB);
+            this.Controls.Add(this.genderTB);
+            this.Controls.Add(this.phoneNumberTB);
+            this.Controls.Add(this.ageTB);
+            this.Controls.Add(this.nameTB);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -207,7 +258,6 @@
             this.Text = "MedicalCertificate";
             this.Load += new System.EventHandler(this.MedicalCertificate_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -223,11 +273,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox definitiveTB;
+        private System.Windows.Forms.TextBox nameTB;
+        private System.Windows.Forms.TextBox ageTB;
+        private System.Windows.Forms.TextBox phoneNumberTB;
+        private System.Windows.Forms.TextBox genderTB;
+        private System.Windows.Forms.TextBox restTB;
+        private System.Windows.Forms.TextBox dateTB;
     }
 }
