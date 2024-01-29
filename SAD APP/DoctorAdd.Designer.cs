@@ -85,11 +85,11 @@
             // 
             this.groupBox4.Controls.Add(this.patientClinical);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(434, 210);
+            this.groupBox4.Location = new System.Drawing.Point(434, 191);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(308, 135);
+            this.groupBox4.Size = new System.Drawing.Size(332, 172);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Clinical Diagnosis";
@@ -108,11 +108,11 @@
             // 
             this.groupBox3.Controls.Add(this.patientSymptoms);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(434, 29);
+            this.groupBox3.Location = new System.Drawing.Point(434, 20);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(308, 135);
+            this.groupBox3.Size = new System.Drawing.Size(332, 144);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Symptom";
@@ -131,14 +131,15 @@
             // 
             this.groupBox2.Controls.Add(this.patientHistory);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 147);
+            this.groupBox2.Location = new System.Drawing.Point(11, 162);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(366, 198);
+            this.groupBox2.Size = new System.Drawing.Size(366, 201);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "History";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // patientHistory
             // 
@@ -154,7 +155,7 @@
             // 
             this.patientGenderTB.AutoSize = true;
             this.patientGenderTB.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientGenderTB.Location = new System.Drawing.Point(122, 40);
+            this.patientGenderTB.Location = new System.Drawing.Point(7, 78);
             this.patientGenderTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientGenderTB.Name = "patientGenderTB";
             this.patientGenderTB.Size = new System.Drawing.Size(63, 20);
@@ -165,7 +166,7 @@
             // 
             this.patientAgeTB.AutoSize = true;
             this.patientAgeTB.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientAgeTB.Location = new System.Drawing.Point(272, 40);
+            this.patientAgeTB.Location = new System.Drawing.Point(8, 112);
             this.patientAgeTB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientAgeTB.Name = "patientAgeTB";
             this.patientAgeTB.Size = new System.Drawing.Size(39, 20);
@@ -216,7 +217,7 @@
             this.button3.BackColor = System.Drawing.Color.Crimson;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(803, 490);
+            this.button3.Location = new System.Drawing.Point(803, 481);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 38);
@@ -230,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(968, 541);
+            this.ClientSize = new System.Drawing.Size(968, 552);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

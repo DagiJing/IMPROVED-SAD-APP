@@ -128,7 +128,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(520, 176);
+            this.groupBox2.Size = new System.Drawing.Size(520, 183);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Definitive Diagnosis";
@@ -138,7 +138,7 @@
             this.definitiveTB.Location = new System.Drawing.Point(46, 28);
             this.definitiveTB.Margin = new System.Windows.Forms.Padding(4);
             this.definitiveTB.Name = "definitiveTB";
-            this.definitiveTB.Size = new System.Drawing.Size(390, 125);
+            this.definitiveTB.Size = new System.Drawing.Size(390, 135);
             this.definitiveTB.TabIndex = 0;
             this.definitiveTB.Text = "";
             // 
@@ -161,7 +161,7 @@
             this.button2.BackColor = System.Drawing.Color.Crimson;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(359, 491);
+            this.button2.Location = new System.Drawing.Point(432, 491);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 39);
