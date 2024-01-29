@@ -67,7 +67,7 @@
             this.frequencyTB.Location = new System.Drawing.Point(182, 130);
             this.frequencyTB.Margin = new System.Windows.Forms.Padding(4);
             this.frequencyTB.Name = "frequencyTB";
-            this.frequencyTB.Size = new System.Drawing.Size(166, 23);
+            this.frequencyTB.Size = new System.Drawing.Size(166, 27);
             this.frequencyTB.TabIndex = 1;
             // 
             // dosageTB
@@ -75,7 +75,7 @@
             this.dosageTB.Location = new System.Drawing.Point(182, 89);
             this.dosageTB.Margin = new System.Windows.Forms.Padding(4);
             this.dosageTB.Name = "dosageTB";
-            this.dosageTB.Size = new System.Drawing.Size(166, 23);
+            this.dosageTB.Size = new System.Drawing.Size(166, 27);
             this.dosageTB.TabIndex = 1;
             // 
             // medicationTB
@@ -83,7 +83,7 @@
             this.medicationTB.Location = new System.Drawing.Point(182, 48);
             this.medicationTB.Margin = new System.Windows.Forms.Padding(4);
             this.medicationTB.Name = "medicationTB";
-            this.medicationTB.Size = new System.Drawing.Size(254, 23);
+            this.medicationTB.Size = new System.Drawing.Size(254, 27);
             this.medicationTB.TabIndex = 1;
             // 
             // label3
@@ -93,7 +93,7 @@
             this.label3.Location = new System.Drawing.Point(64, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Frequency:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -105,7 +105,7 @@
             this.label2.Location = new System.Drawing.Point(78, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dosage:";
             // 
@@ -116,7 +116,7 @@
             this.label1.Location = new System.Drawing.Point(58, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Medication:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -136,10 +136,10 @@
             // 
             // definitiveTB
             // 
-            this.definitiveTB.Location = new System.Drawing.Point(46, 28);
+            this.definitiveTB.Location = new System.Drawing.Point(19, 28);
             this.definitiveTB.Margin = new System.Windows.Forms.Padding(4);
             this.definitiveTB.Name = "definitiveTB";
-            this.definitiveTB.Size = new System.Drawing.Size(390, 135);
+            this.definitiveTB.Size = new System.Drawing.Size(492, 147);
             this.definitiveTB.TabIndex = 0;
             this.definitiveTB.Text = "";
             // 
@@ -176,10 +176,10 @@
             this.button3.BackColor = System.Drawing.Color.MediumBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(184, 491);
+            this.button3.Location = new System.Drawing.Point(171, 491);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 39);
+            this.button3.Size = new System.Drawing.Size(203, 39);
             this.button3.TabIndex = 3;
             this.button3.Text = "Medical Certificate";
             this.button3.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@
             // 
             // DoctorDefinitive
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(604, 581);

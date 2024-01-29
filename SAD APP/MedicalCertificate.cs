@@ -32,6 +32,9 @@ namespace SAD_APP
             phoneNumberTB.Text = pcontactNumber;
             genderTB.Text = pgender;
             definitiveTB.Text = definitive;
+            DateTime currentdate = DateTime.Now;
+            string currentDateAndTime = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            dateTB.Text = currentDateAndTime;
 
         }
 
@@ -62,6 +65,11 @@ namespace SAD_APP
         }
 
         private void nameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneNumberTB_TextChanged(object sender, EventArgs e)
         {
 
         }
