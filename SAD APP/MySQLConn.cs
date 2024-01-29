@@ -24,7 +24,8 @@ namespace SAD_APP
                                             "Encrypt=False;";
 
 
-        // Login page authentication 
+        // Login page authentication
+        // test
         public static (string, int) loginPage(string username, string password)
         {
             try
