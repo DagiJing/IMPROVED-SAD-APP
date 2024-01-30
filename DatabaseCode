@@ -1,0 +1,112 @@
+-- Patient table
+CREATE TABLE Patient (
+    PatientID CHAR(6) PRIMARY KEY,
+    Name VARCHAR(25),
+    Age INT,
+    Gender VARCHAR(6),
+    City VARCHAR(15),
+    ContactNumber VARCHAR(12),
+    Email VARCHAR(50)
+);
+
+-- Diagnosis Table
+CREATE TABLE Diagnosis (
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    ClinicalDiagnosis VARCHAR(25),
+    DifferentialDiagnosis VARCHAR(25),
+    DefinitiveDiagnosis VARCHAR(25)
+);
+
+-- Doctor table
+CREATE TABLE Doctor (
+    DoctorID CHAR(6) PRIMARY KEY,
+    Specialization VARCHAR(25)
+);
+
+-- Appointment Table
+CREATE TABLE Appointment (
+    AppointmentID CHAR(6) PRIMARY KEY,
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    DoctorID CHAR(6) REFERENCES Doctor(DoctorID),
+    AppointmentDate DATE,
+    AppointmentTime TIME
+);
+
+-- Room Table
+CREATE TABLE Room (
+    RoomNumber VARCHAR(3) PRIMARY KEY,
+    RoomType VARCHAR(25),
+    RoomStatus VARCHAR(25)
+);
+
+-- Admission table
+CREATE TABLE Admission (
+    AdmissionID CHAR(6) PRIMARY KEY,
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    RoomNumber VARCHAR(3) REFERENCES Room(RoomNumber),
+    AdmissionDate DATE,
+    DischargeDate DATE
+);
+
+-- Billing Table
+CREATE TABLE Billing (
+    BillID CHAR(6) PRIMARY KEY,
+    AdmissionID CHAR(6) REFERENCES Admission(AdmissionID),
+    TotalAmount VARCHAR(10),
+    PaymentStatus VARCHAR(10),
+    PaymentType VARCHAR(10)
+);
+
+-- Prescription table
+CREATE TABLE Prescription (
+    PrescriptionID CHAR(6) PRIMARY KEY,
+    DoctorID CHAR(6) REFERENCES Doctor(DoctorID),
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    Medication VARCHAR(50),
+    Dosage VARCHAR(50),
+    PrescriptionDate DATE,
+    Frequency VARCHAR(10)
+);
+
+-- Lab technician table
+CREATE TABLE LabTechnician (
+    LabTechID CHAR(6) PRIMARY KEY,
+    ShiftInformation VARCHAR(10)
+);
+
+-- Lab test Table
+CREATE TABLE LabTest (
+    TestID CHAR(6) PRIMARY KEY,
+    TestName VARCHAR(25),
+    TestCost VARCHAR(10)
+);
+
+-- Test request table
+CREATE TABLE TestRequest (
+    RequestID CHAR(6) PRIMARY KEY,
+    DoctorID CHAR(6) REFERENCES Doctor(DoctorID),
+    LabTestID CHAR(6) REFERENCES LabTest(TestID),
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    RequestDate DATE,
+    RequestTime TIME
+);
+
+-- Test Result table
+CREATE TABLE TestResult (
+    TestResultID CHAR(6) PRIMARY KEY,
+    PatientID CHAR(6) REFERENCES Patient(PatientID),
+    RequestID CHAR(6) REFERENCES TestRequest(RequestID),
+    LabTechID CHAR(6) REFERENCES LabTechnician(LabTechID),
+    TestResult VARCHAR(50)
+);
+
+-- User table
+CREATE TABLE Users (
+    UserID CHAR(6) PRIMARY KEY,
+    Name VARCHAR(25),
+    ContactNumber INT,
+    Email VARCHAR(25),
+    Username VARCHAR(25),
+    Password VARCHAR(25),
+    Role VARCHAR(25)
+);
